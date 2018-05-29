@@ -1,6 +1,8 @@
 package com.example.Entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 
@@ -11,13 +13,17 @@ public class Maps {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "maps_id")
-    private Long id;
+    @JsonIgnore
+    private Long idRegion;
+
+
+    @Column(name="id_region",nullable = false)
+    private int id;
 
     @Column(nullable = false)
     private String firstName;
 
-    @Column(nullable = false)
-    private int idRegion;
+
 
     @Column(nullable = false)
     private Long positive_value;
@@ -28,9 +34,9 @@ public class Maps {
     @Column(name = "last_update", nullable = false)
     private Timestamp lastUpdate;
 
-    public Maps(String firstName, int idRegion, Long positive_value, Long negative_value) {
+    public Maps(String firstName, int id, Long positive_value, Long negative_value) {
         this.firstName = firstName;
-        this.idRegion = idRegion;
+        this.id = id;
         this.positive_value = positive_value;
         this.negative_value = negative_value;
     }
@@ -47,7 +53,7 @@ public class Maps {
         this.lastUpdate = lastUpdate;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -55,7 +61,7 @@ public class Maps {
         this.firstName = firstName;
     }
 
-    public void setIdRegion(int idRegion) {
+    public void setIdRegion(Long idRegion) {
         this.idRegion = idRegion;
     }
 
@@ -67,16 +73,16 @@ public class Maps {
         this.negative_value = negative_value;
     }
 
-    public Long getId() {
-        return id;
+    public Long getIdRegion() {
+        return idRegion;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public int getIdRegion() {
-        return idRegion;
+    public int getId() {
+        return id;
     }
 
     public Long getPositive_value() {

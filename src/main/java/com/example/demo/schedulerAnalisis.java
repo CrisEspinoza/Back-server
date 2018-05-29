@@ -1,23 +1,25 @@
-package com.example;
+package com.example.demo;
+
+import com.example.Repositories.*;
 
 import com.example.Analyzer.Classifier;
 import com.example.Analyzer.Indice;
-import com.example.Entities.Club;
-import com.example.Entities.Keyword;
-import com.example.Entities.Statistics;
-import com.example.Repositories.ClubRepository;
-import com.example.Repositories.StatisticRepository;
+import com.example.Entities.*;
 import com.mongodb.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
 import java.io.IOException;
+import java.sql.Array;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+
+import static org.apache.commons.lang3.StringUtils.stripAccents;
 
 
 @Transactional
@@ -31,15 +33,23 @@ public class schedulerAnalisis {
     private StatisticRepository statisticsRepository;
 
     @Autowired
+    private CommuneRepository communeRepository;
+
+    @Autowired
+    private RegionRepository regionRepository;
+
+    @Autowired
+    private MapsRepository mapsRepository;
+
+    @Autowired
     private Classifier classifier;
 
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(cron="0 0 * * * *")
     public void analizador() throws IOException {
-        System.out.println("entre");
         this.analisisGeneral();
-        System.out.println("entre1");
+
         this.analisisEspecifico();
-        System.out.println("entre2");
+
     }
 
     public void analisisGeneral() throws IOException {
@@ -49,6 +59,20 @@ public class schedulerAnalisis {
         DBCollection collection = db.getCollection("futbol");
         DBCursor cursor = collection.find();
 
+        ArrayList<Commune> comunas = (ArrayList<Commune>) communeRepository.findAll();
+        ArrayList<Region> regiones= (ArrayList<Region>) regionRepository.findAll();
+        Maps[] maps= new Maps[15];
+        System.out.println("llegue aca1");
+        Date date = new Date();
+        long time = date.getTime();
+        for (int i=0;i<regiones.size();i++){
+            maps[i]= new Maps();
+            maps[i].setFirstName(regiones.get(i).getFirstName());
+            maps[i].setId(regiones.get(i).getIdMaps());
+            maps[i].setNegative_value((long) 0);
+            maps[i].setPositive_value((long) 0);
+
+        }
         int[] acumulador= new int[3];
         acumulador[0]=0;
         acumulador[1]=0;
@@ -56,26 +80,55 @@ public class schedulerAnalisis {
 
         while (cursor.hasNext()) {
             DBObject tweet = cursor.next();
-
+            int region=0;
             // System.out.println(">>>>>"+tweet.get("text").toString());
+            String location = stripAccents(tweet.get("locationUser").toString().split(",")[0]).toLowerCase();
             HashMap<String,Double> resultado = classifier.classify(tweet.get("text").toString());
+            for (Commune c: comunas) {
+
+                if(location.equals(stripAccents(c.getFirstName()).toLowerCase())){
+                       region=c.getRegion().getId().intValue()-1;
+                    if (resultado.get("positive")> resultado.get("negative")){
+
+                        maps[region].setPositive_value(maps[region].getPositive_value()+1);
+                    }
+                    else if(resultado.get("positive")< resultado.get("negative")){
+
+                        maps[region].setNegative_value(maps[region].getNegative_value()+1);
+                    }
+
+
+
+                    break;
+                }
+
+            }
             if (resultado.get("positive")> resultado.get("negative")){
                 acumulador[0]+=1;
+
             }
             else if(resultado.get("positive")< resultado.get("negative")){
                 acumulador[1]+=1;
+
             }
             else {
                 acumulador[2]+=1;
             }
+            //System.out.println("la ubicacon de este tweet es :" +location);
+
+
+        }
+        System.out.println(">>>>llegue aca2");
+        for (Maps m: maps) {
+            m.setLastUpdate(new Timestamp(time));
+            mapsRepository.save(m);
 
         }
 
         Club equipo = clubRepository.findClubById( Long.valueOf(17));
 
         // se crea una fecha tipo timestamp para el registro historico
-        Date date = new Date();
-        long time = date.getTime();
+
 
         System.out.println("#################################################################");
         System.out.println("#################################################################");
@@ -96,7 +149,7 @@ public class schedulerAnalisis {
 
         statistics.setLastUpdate(new Timestamp(time));
         statistics.setName_statics("estadistica de generales");
-        statistics.setLastUpdate(new Timestamp(time));
+
         equipo.getStatistics().add(statistics);
         clubRepository.save(equipo);
     }
