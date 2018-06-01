@@ -25,6 +25,9 @@ public class Club implements Serializable {
     private String nickname;
 
     @Column(nullable = false)
+    private String url;
+
+    @Column(nullable = false)
     private int trophies;
 
     @Column(name = "last_update", nullable = false)
@@ -43,9 +46,11 @@ public class Club implements Serializable {
     @JoinColumn(name="commune_id")
     private Commune comuna;
 
-    public Club() {
+    public Club() { }
 
-    }
+    public String getUrl() { return url; }
+
+    public void setUrl(String url) { this.url = url; }
 
     public Commune getComuna() {
         return comuna;

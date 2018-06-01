@@ -16,14 +16,11 @@ public class Maps {
     @JsonIgnore
     private Long idRegion;
 
-
     @Column(name="id_region",nullable = false)
     private int id;
 
     @Column(nullable = false)
     private String firstName;
-
-
 
     @Column(nullable = false)
     private Long positive_value;

@@ -1,8 +1,8 @@
-package com.example.demo;
-
-import com.example.Repositories.*;
+package com.example;
 
 import com.example.Analyzer.Classifier;
+import com.example.Repositories.*;
+
 import com.example.Analyzer.Indice;
 import com.example.Entities.*;
 import com.mongodb.*;
@@ -44,6 +44,7 @@ public class schedulerAnalisis {
     @Autowired
     private Classifier classifier;
 
+
     @Scheduled(cron="0 0 * * * *")
     public void analizador() throws IOException {
         this.analisisGeneral();
@@ -68,7 +69,7 @@ public class schedulerAnalisis {
         for (int i=0;i<regiones.size();i++){
             maps[i]= new Maps();
             maps[i].setFirstName(regiones.get(i).getFirstName());
-            maps[i].setId(regiones.get(i).getIdMaps());
+            maps[i].setIdRegion(regiones.get(i).getId());
             maps[i].setNegative_value((long) 0);
             maps[i].setPositive_value((long) 0);
 

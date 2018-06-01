@@ -23,7 +23,7 @@ public class MapsService {
     @ResponseBody
     public List<Maps> getAllMaps() {
         List<Maps> maps= mapsRepository.findAll();
-        maps.sort(Comparator.comparing(Maps::getId));
+        maps.sort(Comparator.comparing(Maps::getIdRegion));
 
         ArrayList<Maps> mapsFinal= new ArrayList<Maps>();
 
