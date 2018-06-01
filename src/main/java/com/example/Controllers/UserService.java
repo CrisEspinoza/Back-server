@@ -16,7 +16,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.POST)
     public User create(@RequestBody User user){
         return userRepository.save(user);
 
@@ -26,7 +26,7 @@ public class UserService {
     public User autentificar(@RequestBody String json) throws JSONException {
         JSONObject response = new JSONObject(json);
         String email= response.getString("email");
-        String password=response.getString("contraseña");
+        String password=response.getString("password");
 
         User user=userRepository.findByEmail(email);
 
