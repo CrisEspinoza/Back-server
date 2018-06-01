@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -21,16 +22,27 @@ public class Region implements Serializable {
 
     @OneToMany(mappedBy="region")
     @JsonIgnore
-    private Set<Commune> Commune;
+    private List<Commune> Commune;
+
+    @Column(nullable = false)
+    private int idMaps;
+
+    public int getIdMaps() {
+        return idMaps;
+    }
+
+    public void setIdMaps(int idMaps) {
+        this.idMaps = idMaps;
+    }
 
     public Region() {
     }
 
-    public Set<Commune> getCommune() {
+    public List<Commune> getCommune() {
         return Commune;
     }
 
-    public void setCommune(Set<Commune> commune) {
+    public void setCommune( List<Commune> commune) {
         Commune = commune;
     }
 

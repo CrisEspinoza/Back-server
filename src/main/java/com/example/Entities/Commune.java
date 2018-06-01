@@ -26,6 +26,17 @@ public class Commune implements Serializable {
     @JoinColumn(name="region_id")
     private Region region;
 
+    @Column(nullable = true )
+    private int idMaps;
+
+    public int getIdMaps() {
+        return idMaps;
+    }
+
+    public void setIdMaps(int idMaps) {
+        this.idMaps = idMaps;
+    }
+
     @OneToMany(mappedBy="comuna")
     @JsonIgnore
     private Set<Club> Club;
