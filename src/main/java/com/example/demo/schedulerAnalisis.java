@@ -50,7 +50,7 @@ public class schedulerAnalisis {
 
 
 
-    @Scheduled(cron="0 0 * * * *")
+    @Scheduled(fixedRate = 10000)
     public void analizador() throws IOException {
         this.analisisGeneral();
 
@@ -72,6 +72,7 @@ public class schedulerAnalisis {
         System.out.println("{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{");
         System.out.println("{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{");
         System.out.println("region es :"+ regiones.get(6).getFirstName());
+
         System.out.println("{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{");
         System.out.println("{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{");
         Maps[] maps= new Maps[15];
@@ -103,7 +104,7 @@ public class schedulerAnalisis {
         while (cursor.hasNext()) {
             DBObject tweet = cursor.next();
             int region=0;
-            // System.out.println(">>>>>"+tweet.get("text").toString());
+            // System.out.println(">>>>>"+tweet.get("locationUser").toString());
             String location = stripAccents(tweet.get("locationUser").toString().split(",")[0]).toLowerCase();
             HashMap<String,Double> resultado = classifier.classify(tweet.get("text").toString());
             for (Commune c: comunas) {
@@ -131,6 +132,7 @@ public class schedulerAnalisis {
             for (int i=0 ; i< comunasMetropolitana.size();i++){
                 Commune comuna= comunasMetropolitana.get(i);
                 if(location.equals(stripAccents(comuna.getFirstName()).toLowerCase())){
+                    //System.out.println("Esta comuna es :"+ location);
                     if (resultado.get("positive")> resultado.get("negative")){
 
                         mapsSantiago[i].setPositive_value(mapsSantiago[i].getPositive_value()+1);

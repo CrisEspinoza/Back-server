@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.List;
+
 @CrossOrigin
 @RestController
 @RequestMapping("/user")
@@ -15,6 +17,11 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @RequestMapping(method = RequestMethod.GET)
+    public List<User> getAllUser(){
+        return userRepository.findAll();
+    }
 
     @RequestMapping(method = RequestMethod.POST)
     public User create(@RequestBody User user){
