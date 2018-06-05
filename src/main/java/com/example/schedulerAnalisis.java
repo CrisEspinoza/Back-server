@@ -61,8 +61,12 @@ public class schedulerAnalisis {
     public void analisisGeneral() throws IOException {
 
         MongoClient mongoClient= new MongoClient("138.197.128.130",27017);
+        MongoClient mongoClient2= new MongoClient();
         DB db = mongoClient.getDB("twitter7");
+        DB db2= mongoClient2.getDB("twitter7");
         DBCollection collection = db.getCollection("futbol");
+        DBCollection collection2=db2.getCollection("futbol");
+
         DBCursor cursor = collection.find();
         System.out.println("llegue 1");
         ArrayList<Commune> comunas = (ArrayList<Commune>) communeRepository.findAll();
@@ -103,6 +107,28 @@ public class schedulerAnalisis {
 
         while (cursor.hasNext()) {
             DBObject tweet = cursor.next();
+
+//            Respaldo bd mongo
+           DBCursor cur2= collection2.find(new BasicDBObject("id", tweet.get("id")));
+          if(!cur2.hasNext()){
+              System.out.println("insertando nuevo dato");
+              BasicDBObject tweet2;
+              tweet2 = new BasicDBObject("id", tweet.get("id"))
+                      .append("text", tweet.get("text"))
+                      .append("like", tweet.get("like"))
+                      .append("geoLocation", tweet.get("geoLocation"))
+                      .append("retweet", tweet.get("retweet"))
+                      .append("locationUser", tweet.get("locationUser"))
+                      .append("name", tweet.get("name"))
+                      .append("followers", tweet.get("followers"));
+              collection2.insert(tweet2);
+          }
+
+
+
+
+
+
             int region=0;
             // System.out.println(">>>>>"+tweet.get("locationUser").toString());
             String location = stripAccents(tweet.get("locationUser").toString().split(",")[0]).toLowerCase();
