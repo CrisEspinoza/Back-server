@@ -1,4 +1,4 @@
-package com.example;
+package com.example.demo;
 
 import com.example.Analyzer.Classifier;
 import com.example.Repositories.*;
@@ -71,7 +71,7 @@ public class    schedulerAnalisis {
             System.out.println("rtActual:"+ tweet.get("retweet").toString());
             String id = tweet.get("id").toString();
             Status status= buscador.buscar(id);
-            collection.update(tweet, (DBObject) Updates.set("retweet",status.getRetweetCount()));
+            collection.update(tweet, (BasicDBObject) Updates.set("retweet",status.getRetweetCount()));
             System.out.println("rtNuevo:"+ tweet.get("retweet").toString());
          }
 

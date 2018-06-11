@@ -1,7 +1,7 @@
 package com.example.Analyzer;
 
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
+import com.mongodb.*;
+
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -29,14 +29,10 @@ import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 
-import com.mongodb.DBCursor;
-import com.mongodb.DBObject;
-import com.mongodb.MongoClient;
-
 
 public class Indice{
-
-    MongoClient mongoClient = new MongoClient("138.197.128.130",27017);
+    MongoCredential credential = MongoCredential.createCredential("TbdG7", "TBDG7", "antiHackers2.0".toCharArray());
+    MongoClient mongoClient = new MongoClient("128.199.185.248",18117);
     DB db = mongoClient.getDB("twitter7");
     DBCollection collection = db.getCollection("futbol");
     DBCursor cursor = collection.find();

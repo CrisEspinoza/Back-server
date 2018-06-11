@@ -2,10 +2,10 @@ package com.example.Controllers;
 
 import com.example.Entities.Club;
 import com.example.Entities.Keyword;
+import com.example.Entities.Verificador;
 import com.example.Entities.Statistics;
 import com.example.Repositories.ClubRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,7 +31,7 @@ public class ClubService {
         for (Club c: clubs) {
             c.getStatistics().sort(Comparator.comparing(Statistics::getId));
         }
-//
+
         return clubs;
     }
 

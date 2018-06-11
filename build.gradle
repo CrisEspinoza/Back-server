@@ -49,4 +49,5 @@ dependencies {
 
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
     compile group: 'org.json', name: 'json', version: '20180130'
+    compile("org.twitter4j:twitter4j-stream:4.0.2");
 }
