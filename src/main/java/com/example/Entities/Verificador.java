@@ -23,7 +23,6 @@ public class Verificador {
                 .setOAuthConsumerSecret("WpHXugHsoaGzYqSkCcK7M0PXiT7AyKgfCQMT2hhtNskwjVYeGQ")
                 .setOAuthAccessToken("733665170099179521-2KUWF8hPPEKpX7gKubCAANTFlenIYLw")
                 .setOAuthAccessTokenSecret("1kxJB2DBk4O0Ux0s7Z6g7xaX4HoSgK1TJhzul9OY6wOqb");
-
         TwitterFactory tf = new TwitterFactory(cb.build());
         Twitter twitter = tf.getInstance();
 
