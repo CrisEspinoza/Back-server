@@ -70,8 +70,12 @@ public class    schedulerAnalisis {
             DBObject tweet = cursor.next();
             System.out.println("rtActual:"+ tweet.get("retweet").toString());
             String id = tweet.get("id").toString();
+            System.out.println("llegue aca 1");
             Status status= buscador.buscar(id);
-            collection.update(tweet, (BasicDBObject) Updates.set("retweet",status.getRetweetCount()));
+            System.out.println("llegue aca 2");
+            DBObject updated = new BasicDBObject().append("$set", new BasicDBObject().append("retweet",status.getRetweetCount()));
+            collection.update(tweet, updated);
+            System.out.println("llegue aca 3");
             System.out.println("rtNuevo:"+ tweet.get("retweet").toString());
          }
 
