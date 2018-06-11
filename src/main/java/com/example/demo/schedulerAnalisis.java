@@ -7,25 +7,23 @@ import com.example.Analyzer.Indice;
 import com.example.Entities.*;
 import com.mongodb.*;
 
+import com.mongodb.client.model.Updates;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import twitter4j.Status;
 
 import javax.transaction.Transactional;
 import java.io.IOException;
-import java.sql.Array;
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 import static org.apache.commons.lang3.StringUtils.stripAccents;
 
 
 @Transactional
 @Component
-public class schedulerAnalisis {
+public class    schedulerAnalisis {
 
     @Autowired
     private ClubRepository clubRepository;
@@ -52,11 +50,34 @@ public class schedulerAnalisis {
 
     @Scheduled(fixedRate = 10000)
     public void analizador() throws IOException {
-        this.analisisGeneral();
 
-        this.analisisEspecifico();
+        this.actualizarTweet();
+//        this.analisisGeneral();
+//
+//        this.analisisEspecifico();
 
     }
+
+
+    public void actualizarTweet(){
+        Verificador buscador=new Verificador();
+        MongoCredential credential = MongoCredential.createCredential("TbdG7", "TBDG7", "antiHackers2.0".toCharArray());
+        MongoClient mongoo = new MongoClient(new ServerAddress("128.199.185.248", 18117), Arrays.asList(credential));
+        DB database = mongoo.getDB("TBDG7");
+        DBCollection collection = database.getCollection("futbol");
+        DBCursor cursor = collection.find();
+        while (cursor.hasNext()) {
+            DBObject tweet = cursor.next();
+            System.out.println("rtActual:"+ tweet.get("retweet").toString());
+            String id = tweet.get("id").toString();
+            Status status= buscador.buscar(id);
+            collection.update(tweet, (DBObject) Updates.set("retweet",status.getRetweetCount()));
+            System.out.println("rtNuevo:"+ tweet.get("retweet").toString());
+         }
+
+    }
+
+
 
     public void analisisGeneral() throws IOException {
 
