@@ -48,7 +48,7 @@ public class    schedulerAnalisis {
 
 
 
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedRate = 60000)
     public void analizador() throws IOException {
 
         this.actualizarTweet();
@@ -59,6 +59,7 @@ public class    schedulerAnalisis {
     }
 
 
+<<<<<<< Updated upstream
     public void actualizarTweet(){
         Verificador buscador=new Verificador();
         MongoCredential credential = MongoCredential.createCredential("TbdG7", "TBDG7", "antiHackers2.0".toCharArray());
@@ -79,6 +80,19 @@ public class    schedulerAnalisis {
             System.out.println("rtNuevo:"+ tweet.get("retweet").toString());
          }
 
+=======
+    public void analisisGrafo(){
+        System.out.println("INICIOOOOOOOOOO");
+        Neo4j neo = new Neo4j();
+        neo.connect("bolt://167.99.190.18","neo4j","TBDG7ANTIHACKERS2.0");
+        System.out.println("CONECTADOO");
+//        neo.deleteAll();
+        System.out.println("RESETEADO");
+        neo.crearNodosEquipos(clubRepository.findAll());
+        System.out.println("NODO EQUIPO CREADO");
+        neo.crearNodoUsuarios();
+        System.out.println("TERMINOOOOOO");
+>>>>>>> Stashed changes
     }
 
 
