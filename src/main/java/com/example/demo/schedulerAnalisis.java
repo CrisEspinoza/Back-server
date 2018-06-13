@@ -60,26 +60,17 @@ public class    schedulerAnalisis {
     }
 
 
-    public void actualizarTweet(){
-        Verificador buscador=new Verificador();
-        MongoCredential credential = MongoCredential.createCredential("TbdG7", "TBDG7", "antiHackers2.0".toCharArray());
-        MongoClient mongoo = new MongoClient(new ServerAddress("128.199.185.248", 18117), Arrays.asList(credential));
-        DB database = mongoo.getDB("TBDG7");
-        DBCollection collection = database.getCollection("futbol");
-        DBCursor cursor = collection.find();
-        while (cursor.hasNext()) {
-            DBObject tweet = cursor.next();
-            System.out.println("rtActual:"+ tweet.get("retweet").toString());
-            String id = tweet.get("id").toString();
-            System.out.println("llegue aca 1");
-            Status status= buscador.buscar(id);
-            System.out.println("llegue aca 2");
-            DBObject updated = new BasicDBObject().append("$set", new BasicDBObject().append("retweet",status.getRetweetCount()));
-            collection.update(tweet, updated);
-            System.out.println("llegue aca 3");
-            System.out.println("rtNuevo:"+ tweet.get("retweet").toString());
-         }
-
+    public void analisisGrafo(){
+        System.out.println("INICIOOOOOOOOOO");
+        Neo4j neo = new Neo4j();
+        neo.connect("bolt://localhost","neo4j","kimbo123");
+        System.out.println("CONECTADOO");
+        neo.deleteAll();
+        System.out.println("RESETEADO");
+        neo.crearNodosEquipos(clubRepository.findAll());
+        System.out.println("NODO EQUIPO CREADO");
+        neo.crearNodoUsuarios();
+        System.out.println("TERMINOOOOOO");
     }
 
 
