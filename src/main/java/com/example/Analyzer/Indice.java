@@ -39,6 +39,7 @@ public class Indice{
     DBCollection collection = db.getCollection("futbol");
     DBCursor cursor = collection.find();
 
+
     public void indexar() {
         try {
             Directory dir = FSDirectory.open(Paths.get("index/"));
@@ -81,8 +82,8 @@ public class Indice{
     }
 
 
-    public  ArrayList<Tweet>  buscar(String equipo){
-        ArrayList<Tweet> tweets = new ArrayList<Tweet>();
+    public  ArrayList<Tweet >  buscar(String equipo){
+        ArrayList<Tweet > tweets = new ArrayList<Tweet>();
 
         try {
 
@@ -101,7 +102,6 @@ public class Indice{
                 Document doc = searcher.doc(hits[i].doc);
                 //String id_salida = doc.get("id");
                 //System.out.println(id_salida);
-                String text_salida = doc.get("text");
                 Tweet tw= new Tweet(doc.get("text"),doc.get("name"),doc.get("followers"));
                 tweets.add(tw);
             }

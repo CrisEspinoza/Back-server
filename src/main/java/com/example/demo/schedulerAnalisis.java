@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.Analyzer.Classifier;
+import com.example.Analyzer.Neo4j;
 import com.example.Repositories.*;
 
 import com.example.Analyzer.Indice;
@@ -49,9 +50,9 @@ public class    schedulerAnalisis {
 
 
     @Scheduled(fixedRate = 10000)
-    public void analizador() throws IOException {
+    public void analizador() throws IOException, InterruptedException {
 
-        this.actualizarTweet();
+        this.analisisGrafo();
 //        this.analisisGeneral();
 //
 //        this.analisisEspecifico();
@@ -59,26 +60,19 @@ public class    schedulerAnalisis {
     }
 
 
-    public void actualizarTweet(){
-        Verificador buscador=new Verificador();
-        MongoCredential credential = MongoCredential.createCredential("TbdG7", "TBDG7", "antiHackers2.0".toCharArray());
-        MongoClient mongoo = new MongoClient(new ServerAddress("128.199.185.248", 18117), Arrays.asList(credential));
-        DB database = mongoo.getDB("TBDG7");
-        DBCollection collection = database.getCollection("futbol");
-        DBCursor cursor = collection.find();
-        while (cursor.hasNext()) {
-            DBObject tweet = cursor.next();
-            System.out.println("rtActual:"+ tweet.get("retweet").toString());
-            String id = tweet.get("id").toString();
-            System.out.println("llegue aca 1");
-            Status status= buscador.buscar(id);
-            System.out.println("llegue aca 2");
-            DBObject updated = new BasicDBObject().append("$set", new BasicDBObject().append("retweet",status.getRetweetCount()));
-            collection.update(tweet, updated);
-            System.out.println("llegue aca 3");
-            System.out.println("rtNuevo:"+ tweet.get("retweet").toString());
-         }
-
+    public void analisisGrafo() throws InterruptedException {
+        System.out.println("INICIOOOOOOOOOO");
+        Neo4j neo = new Neo4j();
+        neo.connect("bolt://167.99.190.18","neo4j","TBDG7ANTIHACKERS2.0");
+//        System.out.println("CONECTADOO");
+//        neo.deleteAll();
+//        System.out.println("RESETEADO");
+//        neo.crearNodosEquipos(clubRepository.findAll());
+//        System.out.println("NODO EQUIPO CREADO");
+//        neo.crearNodoUsuarios();
+        neo.relacionarTweet(clubRepository.findAll());
+        System.out.println("TERMINOOOOOO");
+        Thread.sleep(900000000);
     }
 
 
@@ -97,7 +91,7 @@ public class    schedulerAnalisis {
         ArrayList<Commune> comunas = (ArrayList<Commune>) communeRepository.findAll();
         ArrayList<Region> regiones= (ArrayList<Region>) regionRepository.findAll();
         System.out.println("llegue 2");
-       List<Commune> comunasMetropolitana =  regiones.get(6).getCommune();
+        List<Commune> comunasMetropolitana =  regiones.get(6).getCommune();
         System.out.println("{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{");
         System.out.println("{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{");
         System.out.println("region es :"+ regiones.get(6).getFirstName());
@@ -134,20 +128,20 @@ public class    schedulerAnalisis {
             DBObject tweet = cursor.next();
 
 //            Respaldo bd mongo
-           DBCursor cur2= collection2.find(new BasicDBObject("id", tweet.get("id")));
-          if(!cur2.hasNext()){
-              System.out.println("insertando nuevo dato");
-              BasicDBObject tweet2;
-              tweet2 = new BasicDBObject("id", tweet.get("id"))
-                      .append("text", tweet.get("text"))
-                      .append("like", tweet.get("like"))
-                      .append("geoLocation", tweet.get("geoLocation"))
-                      .append("retweet", tweet.get("retweet"))
-                      .append("locationUser", tweet.get("locationUser"))
-                      .append("name", tweet.get("name"))
-                      .append("followers", tweet.get("followers"));
-              collection2.insert(tweet2);
-          }
+            DBCursor cur2= collection2.find(new BasicDBObject("id", tweet.get("id")));
+            if(!cur2.hasNext()){
+                System.out.println("insertando nuevo dato");
+                BasicDBObject tweet2;
+                tweet2 = new BasicDBObject("id", tweet.get("id"))
+                        .append("text", tweet.get("text"))
+                        .append("like", tweet.get("like"))
+                        .append("geoLocation", tweet.get("geoLocation"))
+                        .append("retweet", tweet.get("retweet"))
+                        .append("locationUser", tweet.get("locationUser"))
+                        .append("name", tweet.get("name"))
+                        .append("followers", tweet.get("followers"));
+                collection2.insert(tweet2);
+            }
 
 
 
@@ -161,7 +155,7 @@ public class    schedulerAnalisis {
             for (Commune c: comunas) {
 
                 if(location.equals(stripAccents(c.getFirstName()).toLowerCase())){
-                       region=c.getRegion().getId().intValue()-1;
+                    region=c.getRegion().getId().intValue()-1;
                     if (resultado.get("positive")> resultado.get("negative")){
 
                         maps[region].setPositive_value(maps[region].getPositive_value()+1);
