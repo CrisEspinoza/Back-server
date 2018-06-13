@@ -33,9 +33,10 @@ import org.apache.lucene.search.TopDocs;
 
 
 public class Indice{
+
     MongoCredential credential = MongoCredential.createCredential("TbdG7", "TBDG7", "antiHackers2.0".toCharArray());
-    MongoClient mongoo = new MongoClient(new ServerAddress("128.199.185.248", 18117), Arrays.asList(credential));
-    DB db = mongoo.getDB("TBDG7");
+    MongoClient mongoClient = new MongoClient(new ServerAddress("128.199.185.248", 18117), Arrays.asList(credential));
+    DB db = mongoClient.getDB("TBDG7");
     DBCollection collection = db.getCollection("futbol");
     DBCursor cursor = collection.find();
 

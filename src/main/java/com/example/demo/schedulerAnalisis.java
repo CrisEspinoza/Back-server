@@ -79,12 +79,13 @@ public class    schedulerAnalisis {
 
     public void analisisGeneral() throws IOException {
 
-        MongoClient mongoClient= new MongoClient("138.197.128.130",27017);
         MongoClient mongoClient2= new MongoClient();
-        DB db = mongoClient.getDB("twitter7");
-        DB db2= mongoClient2.getDB("twitter7");
-        DBCollection collection = db.getCollection("futbol");
-        DBCollection collection2=db2.getCollection("futbol");
+        MongoCredential credential = MongoCredential.createCredential("TbdG7", "TBDG7", "antiHackers2.0".toCharArray());
+        MongoClient mongoClient = new MongoClient(new ServerAddress("128.199.185.248", 18117), Arrays.asList(credential));
+        DB db2= mongoClient2.getDB("TBDG7");
+        DB db = mongoClient.getDB("TBDG7");
+        DBCollection collection  = db.getCollection("futbol");
+        DBCollection collection2 = db2.getCollection("futbol");
 
         DBCursor cursor = collection.find();
         System.out.println("llegue 1");

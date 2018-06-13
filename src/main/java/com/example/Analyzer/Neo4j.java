@@ -3,21 +3,16 @@ package com.example.Analyzer;
 import com.example.Entities.Club;
 import com.example.Entities.Keyword;
 import com.example.Entities.Tweet;
-import com.example.Repositories.ClubRepository;
 import com.mongodb.*;
 import org.neo4j.driver.v1.AuthTokens;
 import org.neo4j.driver.v1.Driver;
 import org.neo4j.driver.v1.GraphDatabase;
-import org.neo4j.driver.v1.Record;
 import org.neo4j.driver.v1.Session;
-import org.neo4j.driver.v1.StatementResult;
-import org.springframework.beans.factory.annotation.Autowired;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static java.sql.DriverManager.println;
 
 public class Neo4j {
     private Driver driver;

@@ -43,13 +43,14 @@ dependencies {
     compile 'org.mongodb:mongo-java-driver:3.8.0-beta2'
     compile 'org.mongodb:mongodb-driver-core:3.8.0-beta2'
     compile group: 'org.apache.opennlp', name: 'opennlp-tools', version: '1.8.4'
-    compile('org.springframework.boot:spring-boot-starter-security')
 
+    //Security
+    compile('org.springframework.boot:spring-boot-starter-security')
     testCompile('org.springframework.security:spring-security-test')
 
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
     compile group: 'org.json', name: 'json', version: '20180130'
     compile("org.twitter4j:twitter4j-stream:4.0.2");
-    compile group: 'org.neo4j', name: 'neo4j', version: '3.4.0'
-    compile group: 'org.neo4j.driver', name: 'neo4j-java-driver', version: '1.6.1'
+
+    compile('org.springframework.boot:spring-boot-starter-data-neo4j')
 }

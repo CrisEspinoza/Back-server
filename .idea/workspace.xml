@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="0233d476-ca23-42fb-9426-dd3b05c18a38" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.lock" afterDir="false" />
@@ -13,12 +14,52 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+=======
+    <list default="true" id="fcd2deaa-d236-4952-b5e0-e20cc869a25e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileContent/annotation-processors.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/build/jacoco/test.exec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.demo.DemoApplicationTests.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.demo.DemoApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/bootWar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.1.jar_8059ed6e1ab8b88aac5d9097fad847bb/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.1.jar_8059ed6e1ab8b88aac5d9097fad847bb/META-INF/maven/org.jacoco/org.jacoco.agent/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.1.jar_8059ed6e1ab8b88aac5d9097fad847bb/META-INF/maven/org.jacoco/org.jacoco.agent/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.1.jar_8059ed6e1ab8b88aac5d9097fad847bb/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Entities/Verificador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Entities/Verificador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +74,15 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileEditorManager">
+<<<<<<< Updated upstream
     <leaf>
       <file leaf-file-name="Indice.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java">
@@ -49,6 +98,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2">
               <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Verificador.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Entities/Verificador.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -271,9 +328,14 @@
     </option>
     <option name="modificationStamps">
       <map>
+        <entry key="$PROJECT_DIR$" value="4584367108000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
+<<<<<<< Updated upstream
         <entry key="$PROJECT_DIR$/build.gradle" value="3025767543" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2881256037" />
+=======
+        <entry key="$PROJECT_DIR$/build.gradle" value="2817205208" />
+>>>>>>> Stashed changes
         <entry key="$PROJECT_DIR$/settings.gradle" value="2780745626" />
       </map>
     </option>
@@ -397,6 +459,7 @@
     </option>
     <option name="projectSyncType">
       <map>
+<<<<<<< Updated upstream
         <entry key="$USER_HOME$/Descargas/artifacts/sakila-backend-spring" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../../redes/proyectoR/Back" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../analisisS" value="PREVIEW" />
@@ -415,12 +478,39 @@
         <entry key="$PROJECT_DIR$/../twitter" value="PREVIEW" />
         <entry key="$USER_HOME$/Escritorio/NV3/Back_end/TDB_back" value="PREVIEW" />
         <entry key="$USER_HOME$/Escritorio/nv2/Proyecto_TDB/Back_end/TDB_back" value="PREVIEW" />
+=======
+        <entry key="$PROJECT_DIR$/../../SentimentAnalysis-master" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+        <entry key="$PROJECT_DIR$/../Colector-server" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../DemoSpring" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../DemoSpring-master" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../SALVADOR/Back-server" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Spring 1 - Ejemplos/SentimentAnalysis-master" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Spring 1 - Ejemplos/buscadorLibros" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Spring 1 - Ejemplos/mongodb-master" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Spring 1 - Ejemplos/tweetcapture-master" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Sprint1" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Sprint1/Taller2-TBD" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Sprint1/Taller2-TBD/colectorTwitter" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../TBD-Back" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../TBD-Colector" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../TBD-SPRIN1/Taller2-Front" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../TBD-SPRIN1/Taller2-TBD" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../TBD-SPRIN1/Taller2-TBD/colectorTwitter" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Taller2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Taller2/Taller2-Back" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Taller2/Taller2-TBD" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Talleres/Taller2/Taller2-TBD" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../lab-TBD" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../traffictweet-master" value="PREVIEW" />
+>>>>>>> Stashed changes
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java" />
       </list>
     </option>
@@ -430,41 +520,66 @@
     <option name="y" value="64" />
     <option name="width" value="1279" />
     <option name="height" value="696" />
+=======
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/Entities/Verificador.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="926" />
+    <option name="height" value="1084" />
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< Updated upstream
       <pane id="AndroidView" />
+=======
+>>>>>>> Stashed changes
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
@@ -472,7 +587,7 @@
               <item name="example" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
@@ -481,18 +596,41 @@
               <item name="Analyzer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
+<<<<<<< Updated upstream
+=======
+            </path>
+            <path>
+              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="Entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+>>>>>>> Stashed changes
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< Updated upstream
+=======
+      <pane id="AndroidView" />
+>>>>>>> Stashed changes
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -556,6 +694,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< Updated upstream
       <changelist id="0233d476-ca23-42fb-9426-dd3b05c18a38" name="Default" comment="" />
       <created>1528857284906</created>
       <option name="number" value="Default" />
@@ -564,9 +703,25 @@
     </task>
     <servers />
   </component>
+=======
+      <changelist id="fcd2deaa-d236-4952-b5e0-e20cc869a25e" name="Default" comment="" />
+      <created>1528692345207</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528692345207</updated>
+      <workItem from="1528692346996" duration="5966000" />
+      <workItem from="1528777650967" duration="3665000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9631000" />
+  </component>
+>>>>>>> Stashed changes
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
     <layout>
+<<<<<<< Updated upstream
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" />
@@ -594,23 +749,136 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+=======
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31681034" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18352681" />
+      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="right" id="Gradle" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.3297414" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+>>>>>>> Stashed changes
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="604">
           <caret line="85" column="54" lean-forward="true" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Entities/Verificador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/SentimentAnalysisApplicationConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/WebDemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Classifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="66" column="79" lean-forward="true" selection-start-line="66" selection-start-column="79" selection-end-line="66" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Entities/Verificador.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="2">
           <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+=======
+        <state relative-caret-position="285">
+          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
