@@ -65,25 +65,7 @@ public class Classifier {
         this.categorizer=new DocumentCategorizerME(this.model);
     }
     public HashMap<String,Double> classify(String tweet){
-//        String[] words=tweet.replaceAll("[^A-Za-z]"," ").split(" ");
-//        ArrayList<String> wordF = new ArrayList<String>();
-//        for (String i: words) {
-//            if(!(i.equals(""))){
-//                wordF.add(i);
-//                System.out.println("*******"+i);
-//            }
-//
-//        }
-//        String[] wordsAnalizar = new String[wordF.size()];
-//        wordsAnalizar = wordF.toArray(wordsAnalizar);
-//
-//        double[] prob=categorizer.categorize(words);
-//        System.out.println("*******"+words[0]);
-//        HashMap<String,Double> result=new HashMap<String,Double>();
-//        for(int i=0;i<categorizer.getNumberOfCategories();i++){
-//            result.put(categorizer.getCategory(i),prob[i]);
-//        }
-//        return result;
+
 
         String[] words=tweet.replaceAll("[^A-Za-z]"," ").split(" ");
         double[] prob=categorizer.categorize(words);

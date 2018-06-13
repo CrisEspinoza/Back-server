@@ -1,10 +1,12 @@
 package com.example.Analyzer;
 
+import com.example.Entities.Tweet;
 import com.mongodb.*;
 
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -32,8 +34,8 @@ import org.apache.lucene.search.TopDocs;
 
 public class Indice{
     MongoCredential credential = MongoCredential.createCredential("TbdG7", "TBDG7", "antiHackers2.0".toCharArray());
-    MongoClient mongoClient = new MongoClient("128.199.185.248",18117);
-    DB db = mongoClient.getDB("twitter7");
+    MongoClient mongoo = new MongoClient(new ServerAddress("128.199.185.248", 18117), Arrays.asList(credential));
+    DB db = mongoo.getDB("TBDG7");
     DBCollection collection = db.getCollection("futbol");
     DBCursor cursor = collection.find();
 
@@ -60,6 +62,8 @@ public class Indice{
                 // los  StringField son mas orientados a informacion
                 // los textfield es lo que se  tokenizara
                 doc.add(new StringField("id", elemento.get("_id").toString(), Field.Store.YES));
+                doc.add(new StringField("name", elemento.get("name").toString(), Field.Store.YES));
+                doc.add(new StringField("followers", elemento.get("followers").toString(), Field.Store.YES));
                 doc.add(new TextField("text", elemento.get("text").toString(), Field.Store.YES));
                 if (writer.getConfig().getOpenMode() == OpenMode.CREATE) {
                     //System.out.println("Indexando el archivo: " + elemento.get("_id") + "con texto" + elemento.get("text"));
@@ -77,8 +81,8 @@ public class Indice{
     }
 
 
-    public  ArrayList<String>  buscar(String equipo){
-        ArrayList<String> tweets = new ArrayList<String>();
+    public  ArrayList<Tweet>  buscar(String equipo){
+        ArrayList<Tweet> tweets = new ArrayList<Tweet>();
 
         try {
 
@@ -98,7 +102,8 @@ public class Indice{
                 //String id_salida = doc.get("id");
                 //System.out.println(id_salida);
                 String text_salida = doc.get("text");
-                tweets.add(text_salida);
+                Tweet tw= new Tweet(doc.get("text"),doc.get("name"),doc.get("followers"));
+                tweets.add(tw);
             }
             reader.close();
 

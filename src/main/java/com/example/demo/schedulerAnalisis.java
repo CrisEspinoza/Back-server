@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.Analyzer.Classifier;
+import com.example.Analyzer.Neo4j;
 import com.example.Repositories.*;
 
 import com.example.Analyzer.Indice;
@@ -51,7 +52,7 @@ public class    schedulerAnalisis {
     @Scheduled(fixedRate = 10000)
     public void analizador() throws IOException {
 
-        this.actualizarTweet();
+        this.analisisGrafo();
 //        this.analisisGeneral();
 //
 //        this.analisisEspecifico();
@@ -268,7 +269,7 @@ public class    schedulerAnalisis {
 
 
             if (equipo.getId() != 17){
-                ArrayList<String> tweets;
+                ArrayList<Tweet> tweets;
                 String busqueda = equipo.getName();
                 for (Keyword apodo: equipo.getKeywords()) {
                     busqueda =busqueda+" "+apodo.getName_keyword();
@@ -277,8 +278,8 @@ public class    schedulerAnalisis {
                 System.out.println("%%%%% " + busqueda + "%%%%%%%");
                 tweets = indice.buscar(busqueda);
 
-                for (String tweet : tweets) {
-                    HashMap<String, Double> resultado = classifier.classify(tweet);
+                for (Tweet tweet : tweets) {
+                    HashMap<String, Double> resultado = classifier.classify(tweet.getText());
 
                     if (resultado.get("positive") > resultado.get("negative")) {
                         acumulador[0] += 1;
