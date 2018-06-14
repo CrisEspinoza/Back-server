@@ -65,14 +65,14 @@ public class    schedulerAnalisis {
         Neo4j neo = new Neo4j();
         neo.connect("bolt://167.99.190.18","neo4j","TBDG7ANTIHACKERS2.0");
 //        System.out.println("CONECTADOO");
-//        neo.deleteAll();
-//        System.out.println("RESETEADO");
+
+
 //        neo.crearNodosEquipos(clubRepository.findAll());
 //        System.out.println("NODO EQUIPO CREADO");
 //        neo.crearNodoUsuarios();
-        neo.relacionarTweet(clubRepository.findAll());
-        System.out.println("TERMINOOOOOO");
-        Thread.sleep(900000000);
+       // neo.relacionarTweet(clubRepository.findAll());
+        //System.out.println("TERMINOOOOOO");
+        //Thread.sleep(900000000);
     }
 
 
