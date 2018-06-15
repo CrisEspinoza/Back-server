@@ -52,10 +52,11 @@ public class    schedulerAnalisis {
     @Scheduled(fixedRate = 10000)
     public void analizador() throws IOException, InterruptedException {
 
-        this.analisisGrafo();
-//        this.analisisGeneral();
-//
-//        this.analisisEspecifico();
+//        this.analisisGrafo();
+        //this.analisisGeneral();
+
+        this.analisisEspecifico();
+        Thread.sleep(900000000);
 
     }
 
@@ -78,6 +79,7 @@ public class    schedulerAnalisis {
 
 
     public void analisisGeneral() throws IOException {
+
 
         MongoClient mongoClient2= new MongoClient();
         MongoCredential credential = MongoCredential.createCredential("TbdG7", "TBDG7", "antiHackers2.0".toCharArray());
@@ -129,20 +131,20 @@ public class    schedulerAnalisis {
             DBObject tweet = cursor.next();
 
 //            Respaldo bd mongo
-            DBCursor cur2= collection2.find(new BasicDBObject("id", tweet.get("id")));
-            if(!cur2.hasNext()){
-                System.out.println("insertando nuevo dato");
-                BasicDBObject tweet2;
-                tweet2 = new BasicDBObject("id", tweet.get("id"))
-                        .append("text", tweet.get("text"))
-                        .append("like", tweet.get("like"))
-                        .append("geoLocation", tweet.get("geoLocation"))
-                        .append("retweet", tweet.get("retweet"))
-                        .append("locationUser", tweet.get("locationUser"))
-                        .append("name", tweet.get("name"))
-                        .append("followers", tweet.get("followers"));
-                collection2.insert(tweet2);
-            }
+//            DBCursor cur2= collection2.find(new BasicDBObject("id", tweet.get("id")));
+//            if(!cur2.hasNext()){
+//                System.out.println("insertando nuevo dato");
+//                BasicDBObject tweet2;
+//                tweet2 = new BasicDBObject("id", tweet.get("id"))
+//                        .append("text", tweet.get("text"))
+//                        .append("like", tweet.get("like"))
+//                        .append("geoLocation", tweet.get("geoLocation"))
+//                        .append("retweet", tweet.get("retweet"))
+//                        .append("locationUser", tweet.get("locationUser"))
+//                        .append("name", tweet.get("name"))
+//                        .append("followers", tweet.get("followers"));
+//                collection2.insert(tweet2);
+//            }
 
 
 
@@ -193,6 +195,7 @@ public class    schedulerAnalisis {
 
 
             if (resultado.get("positive")> resultado.get("negative")){
+
                 acumulador[0]+=1;
 
             }
@@ -254,7 +257,8 @@ public class    schedulerAnalisis {
         Iterable<Club>  clubs= clubRepository.findAll();
         Indice indice = new Indice();
         indice.indexar();
-
+        Neo4j neo = new Neo4j();
+        neo.connect("bolt://167.99.190.18","neo4j","TBDG7ANTIHACKERS2.0");
         for (Club equipo: clubs) {
             int[] acumulador= new int[3];
             acumulador[0]=0;
@@ -274,13 +278,15 @@ public class    schedulerAnalisis {
 
                 for (Tweet tweet : tweets) {
                     HashMap<String, Double> resultado = classifier.classify(tweet.getText());
-
+                    int[] datos=neo.getInfluencia(tweet.getName(),equipo.getName());
+                    double influencia=datos[0]*0.7+datos[1]*0.3;
                     if (resultado.get("positive") > resultado.get("negative")) {
-                        acumulador[0] += 1;
+
+                        acumulador[0] += influencia;
                     } else if (resultado.get("positive") < resultado.get("negative")) {
-                        acumulador[1] += 1;
+                        acumulador[1] += influencia;
                     } else {
-                        acumulador[2] += 1;
+                        acumulador[2] += influencia;
                     }
 
                 }

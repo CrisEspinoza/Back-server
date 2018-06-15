@@ -4,10 +4,7 @@ import com.example.Entities.Club;
 import com.example.Entities.Keyword;
 import com.example.Entities.Tweet;
 import com.mongodb.*;
-import org.neo4j.driver.v1.AuthTokens;
-import org.neo4j.driver.v1.Driver;
-import org.neo4j.driver.v1.GraphDatabase;
-import org.neo4j.driver.v1.Session;
+import org.neo4j.driver.v1.*;
 
 
 import java.util.ArrayList;
@@ -189,6 +186,30 @@ public class Neo4j {
             }
         }
         System.out.println("club terminado");
+
+    }
+
+    public int[]  getInfluencia(String usuario,String club ){
+            String query ="MATCH p=(u:Usuario)-[r:Tweet]->(c:Club) where u.name='"+limpiar(usuario)+"' and c.name='"+club+"' " +
+                    "RETURN r.followers as seguidores, r.texto as cantidad";
+            StatementResult nodo=session.run(query);
+            int[] resultado = new int[2];
+            if(nodo.hasNext()){
+                Record record = nodo.next();
+                String seguidores=  record.get("seguidores").asString();
+                String cantidad= record.get("cantidad").asString();
+
+                resultado[0] = Integer.parseInt(seguidores);
+                resultado[1]= Integer.parseInt(cantidad);
+
+
+            }else{
+                resultado[0] =1;
+                resultado[1]= 1;
+            }
+
+            return resultado;
+
 
     }
 }
