@@ -96,7 +96,7 @@ public class Indice{
             QueryParser parser = new QueryParser("text", analyzer);
             Query query = parser.parse(equipo);
 
-            TopDocs results = searcher.search(query,220000);
+            TopDocs results = searcher.search(query,25000);
             ScoreDoc[] hits = results.scoreDocs;
             System.out.println(hits.length);
             for(int i = 0; i < hits.length; i++) {
