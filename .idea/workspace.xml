@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="5ef02988-a27e-487a-9a7b-10cad8d1d3b8" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/artifacts/Gradle___TBD_G7_war.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/artifacts/Gradle___TBD_G7_war__exploded_.xml" afterDir="false" />
@@ -158,6 +159,24 @@
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
+=======
+    <list default="true" id="73cfa229-a11c-4035-9379-e938fc40a7e6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Analyzer/Neo4j.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Analyzer/Neo4j.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Entities/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Entities/Statistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -166,6 +185,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< Updated upstream
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -180,10 +200,28 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="20" selection-start-line="20" selection-end-line="21" selection-end-column="42" />
+=======
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Neo4j.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Neo4j.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2533">
+              <caret line="158" column="65" selection-start-line="158" selection-start-column="65" selection-end-line="158" selection-end-column="65" />
+              <folding>
+                <element signature="e#4364#4372#0" expanded="true" />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="NeoInfluentialService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Controllers/NeoInfluentialService.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -193,12 +231,47 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#905#921#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="WebConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/WebConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SentimentAnalysisApplicationConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/SentimentAnalysisApplicationConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Indice.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1751">
+              <caret line="132" column="54" selection-start-line="132" selection-start-column="54" selection-end-line="132" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schedulerAnalisis.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="61" column="73" selection-start-line="61" selection-start-column="73" selection-end-line="61" selection-end-column="73" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+<<<<<<< Updated upstream
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -207,10 +280,13 @@
       </list>
     </option>
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
+<<<<<<< Updated upstream
     <option name="modificationStamps">
       <map>
         <entry key="$PROJECT_DIR$" value="4584559343000" />
@@ -219,10 +295,373 @@
         <entry key="$PROJECT_DIR$/settings.gradle" value="2780745626" />
       </map>
     </option>
+=======
+    <option name="myGradleHomes">
+      <map>
+        <entry key="$PROJECT_DIR$" value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1" />
+      </map>
+    </option>
+    <option name="myGradleVersions">
+      <map>
+        <entry key="$PROJECT_DIR$" value="4.5.1" />
+      </map>
+    </option>
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="TBD" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="TBD" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="availableTasks">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'TBD'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'TBD'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in root project 'TBD'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles an executable war archive containing webapp content, and the main classes and their dependencies." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="bootWar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'TBD'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Verifies code coverage metrics based on specified rules for the test task." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jacocoTestCoverageVerification" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles an executable jar archive containing the main classes and their dependencies." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="bootJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'TBD'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'TBD'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependency management declared in root project 'TBD'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyManagement" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs this project as a Spring Boot application." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="bootRun" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates a war archive with all the compiled classes, the web-app content and the libraries." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="war" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'TBD'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates code coverage report for the test task." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jacocoTestReport" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'TBD'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'TBD'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="6112322549000" />
+        <entry key="$PROJECT_DIR$/.gradle" value="0" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="520832863" />
+        <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2881256037" />
+        <entry key="$PROJECT_DIR$/settings.gradle" value="2780745626" />
+      </map>
+    </option>
+    <option name="projectBuildClasspath">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="$PROJECT_DIR$">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-gradle-plugin/2.0.1.RELEASE/51cf92fbcfec4ec864ebe186123083209908475a/spring-boot-gradle-plugin-2.0.1.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-gradle-plugin/2.0.1.RELEASE/4fb4f581eef802bec93f060411811e3d178c8190/spring-boot-gradle-plugin-2.0.1.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/2.0.1.RELEASE/a993eae7019f5387642326d35f42c5c90b0ca174/spring-boot-loader-tools-2.0.1.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/2.0.1.RELEASE/a74a3907b0c6570ab9cefc26e611806dc89ca2be/spring-boot-loader-tools-2.0.1.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.spring.gradle/dependency-management-plugin/1.0.5.RELEASE/e9f2761e13da4228793ee5fcaa983889e68c4c61/dependency-management-plugin-1.0.5.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.spring.gradle/dependency-management-plugin/1.0.5.RELEASE/3589987a66349bdc10b18c6c4a5463ffd084c908/dependency-management-plugin-1.0.5.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.14/43a23e357fa7b187c261520914c0b001ea1a62a2/commons-compress-1.14-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.14/7b18320d668ab080758bf5383d6d8fcf750babce/commons-compress-1.14.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.0.5.RELEASE/ab32a4d2b281d459b431a5494a270a64b207490f/spring-core-5.0.5.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.0.5.RELEASE/1bd9feb1d9dac6accd27f5244b6c47cfcb55045c/spring-core-5.0.5.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.0.5.RELEASE/a5e61818e96b5a7645b65946af8e5a238137804d/spring-jcl-5.0.5.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.0.5.RELEASE/f4a2854b9d865e8b86717595aec16f877f8c6489/spring-jcl-5.0.5.RELEASE.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="TBD" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-docs-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-persistent-cache-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-base-services-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-core-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-kotlin-dsl-0.14.2.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-process-services-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-native-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-installation-beacon-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/ant-launcher-1.9.9.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-messaging-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-logging-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-tooling-api-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-wrapper-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-kotlin-dsl-tooling-models-0.14.2.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-core-api-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/ant-1.9.9.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-runtime-api-info-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-jvm-services-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-base-services-groovy-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-build-option-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-resources-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-model-core-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-build-cache-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/groovy-all-2.4.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-cli-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-model-groovy-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-launcher-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-kotlin-dsl-tooling-builders-0.14.2.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-javascript-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-testing-jvm-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-composite-builds-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-build-comparison-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-announce-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-reporting-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-code-quality-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-maven-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-language-groovy-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-ide-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-language-java-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-build-cache-http-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-platform-native-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-platform-base-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-antlr-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-scala-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-osgi-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-ide-play-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-language-scala-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-resources-http-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-jacoco-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-dependency-management-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-tooling-api-builders-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-platform-jvm-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-ivy-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-plugins-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-workers-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-signing-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-language-native-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-platform-play-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-plugin-development-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-testing-base-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-ide-native-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-language-jvm-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-plugin-use-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-build-init-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-diagnostics-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-testing-native-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-version-control-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-resources-sftp-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-resources-gcs-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-resources-s3-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-publish-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-test-kit-4.5.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/plugins/gradle-ear-4.5.1.jar" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Descargas/artifacts/sakila-backend-spring" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../Back-server-master" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../redes/proyectoR/Back" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../analisisS" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../back-server" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../buscadorLibros" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../colector-sv" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../mongo" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../proyecto" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../spring1" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../spring1/Taller2-TBD" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../spring1/Taller2-TBD/colectorTwitter" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../tbd-2/Taller2-TBD" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../tbd2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../tbdFinal/Taller2-Back" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../tdbFinal/Taller1-TBD" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../twitter" value="PREVIEW" />
+        <entry key="$USER_HOME$/Escritorio/NV3/Back_end/TDB_back" value="PREVIEW" />
+        <entry key="$USER_HOME$/Escritorio/nv2/Proyecto_TDB/Back_end/TDB_back" value="PREVIEW" />
+      </map>
+    </option>
+>>>>>>> Stashed changes
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/src/main/java/com/example/Controllers/ClubService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/Controllers/NeoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/Entities/NeoInfluential.java" />
@@ -240,39 +679,78 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
+=======
+        <option value="$PROJECT_DIR$/src/main/java/com/example/Analyzer/Neo4j.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="683" />
+    <option name="y" value="24" />
+    <option name="width" value="683" />
+    <option name="height" value="744" />
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< Updated upstream
+=======
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+>>>>>>> Stashed changes
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
+<<<<<<< Updated upstream
               <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+=======
+              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+>>>>>>> Stashed changes
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+<<<<<<< Updated upstream
               <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+=======
+              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+>>>>>>> Stashed changes
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
+<<<<<<< Updated upstream
               <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+=======
+              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+>>>>>>> Stashed changes
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+<<<<<<< Updated upstream
               <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+=======
+              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+>>>>>>> Stashed changes
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
@@ -280,27 +758,43 @@
               <item name="example" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+<<<<<<< Updated upstream
               <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+=======
+              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+>>>>>>> Stashed changes
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
+<<<<<<< Updated upstream
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TBD" type="b2602c69:ProjectViewProjectNode" />
+=======
+              <item name="Analyzer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Back-server" type="b2602c69:ProjectViewProjectNode" />
+>>>>>>> Stashed changes
               <item name="Back-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
+<<<<<<< Updated upstream
               <item name="Entities" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+>>>>>>> Stashed changes
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< Updated upstream
       <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
@@ -313,6 +807,12 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+=======
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+>>>>>>> Stashed changes
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -374,6 +874,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< Updated upstream
       <changelist id="5ef02988-a27e-487a-9a7b-10cad8d1d3b8" name="Default" comment="" />
       <created>1529547751054</created>
       <option name="number" value="Default" />
@@ -465,10 +966,92 @@
           <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
+=======
+      <changelist id="73cfa229-a11c-4035-9379-e938fc40a7e6" name="Default" comment="" />
+      <created>1529395762484</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1529395762484</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.43057722" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26363635" />
+      <window_info anchor="right" id="Gradle" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.11856474" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Neo4j.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+          <folding>
+            <element signature="e#4364#4372#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="138" column="13" selection-start-line="138" selection-start-column="13" selection-end-line="138" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Neo4j.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="63" column="79" selection-start-line="63" selection-start-column="79" selection-end-line="63" selection-end-column="79" />
+          <folding>
+            <element signature="e#4364#4372#0" expanded="true" />
+>>>>>>> Stashed changes
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Controllers/StatisticService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -517,10 +1100,47 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#756#762#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/SentimentAnalysisApplicationConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="132" column="54" selection-start-line="132" selection-start-column="54" selection-end-line="132" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Neo4j.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2533">
+          <caret line="158" column="65" selection-start-line="158" selection-start-column="65" selection-end-line="158" selection-end-column="65" />
+          <folding>
+            <element signature="e#4364#4372#0" expanded="true" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Controllers/NeoInfluentialService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -529,12 +1149,19 @@
             <element signature="imports" expanded="true" />
             <element signature="e#905#921#0" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="61" column="73" selection-start-line="61" selection-start-column="73" selection-end-line="61" selection-end-column="73" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+<<<<<<< Updated upstream
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
@@ -573,6 +1200,9 @@
         </settings>
       </state>
       <state key="JdkListConfigurable.UI">
+=======
+      <state key="ProjectJDKs.UI">
+>>>>>>> Stashed changes
         <settings>
           <last-edited>1.8</last-edited>
           <splitter-proportions>
@@ -584,6 +1214,7 @@
           </splitter-proportions>
         </settings>
       </state>
+<<<<<<< Updated upstream
       <state key="ModuleStructureConfigurable.UI">
         <settings>
           <last-edited>TBD</last-edited>
@@ -608,6 +1239,8 @@
           </splitter-proportions>
         </settings>
       </state>
+=======
+>>>>>>> Stashed changes
     </states>
   </component>
 </project>

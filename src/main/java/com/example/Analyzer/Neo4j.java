@@ -56,46 +56,20 @@ public class Neo4j {
 //
         for(String nombre: registro){
 
+            DBCursor cur= collection.find(new BasicDBObject("name", nombre));
+            if(cur.hasNext()){
+                DBObject dato = cur.next();
+                int followers= (int) dato.get("followers");
+                if(followers >20000){
+                    session.run("create (a:Usuario {name:'"+limpiar(nombre)+"', followers:"+followers+"})");
+                }
 
+            }
 //            if (!registro.contains(nombre)) {
 //                registro.add(nombre);
-                nombre=nombre.replace("'","");
-                nombre=nombre.replace("/","");
-                nombre=nombre.replace("\"","");
-                nombre=nombre.replace("_","");
-                nombre=nombre.replace("¯(ツ)¯","");
-                nombre=nombre.replace("|","");
-                nombre=nombre.replace("°","");
-                nombre=nombre.replace("¬","");
-                nombre=nombre.replace("!","");
-                nombre=nombre.replace("#","");
-                nombre=nombre.replace("$","");
-                nombre=nombre.replace("%","");
-                nombre=nombre.replace("&","");
-                nombre=nombre.replace("/","");
-                nombre=nombre.replace("(","");
-                nombre=nombre.replace(")","");
-                nombre=nombre.replace("=","");
-                nombre=nombre.replace("?","");
-                nombre=nombre.replace("\\","");
-                nombre=nombre.replace("¡","");
-                nombre=nombre.replace("¿","");
-                nombre=nombre.replace("@","");
-                nombre=nombre.replace("*","");
-                nombre=nombre.replace("+","");
-                nombre=nombre.replace("~","");
-                nombre=nombre.replace("{","");
-                nombre=nombre.replace("}","");
-                nombre=nombre.replace("[","");
-                nombre=nombre.replace("]","");
-                nombre=nombre.replace(";","");
-                nombre=nombre.replace(",","");
-                nombre=nombre.replace(":","");
-                nombre=nombre.replace(".","");
-                nombre=nombre.replace("_","");
-                nombre=nombre.replace("-","");
 
-                session.run("create (a:Usuario {name:'"+nombre+"'})");
+
+
 //            }
         }
         System.out.println("Usuarios agregados");
@@ -146,44 +120,60 @@ public class Neo4j {
 
         Indice indice = new Indice();
        indice.indexar();
-        MongoCredential credential = MongoCredential.createCredential("TbdG7", "TBDG7", "antiHackers2.0".toCharArray());
-        MongoClient mongoo = new MongoClient(new ServerAddress("128.199.185.248", 18117), Arrays.asList(credential));
-        DB database = mongoo.getDB("TBDG7");
-        DBCollection collection = database.getCollection("futbol");
+//        MongoCredential credential = MongoCredential.createCredential("TbdG7", "TBDG7", "antiHackers2.0".toCharArray());
+//        MongoClient mongoo = new MongoClient(new ServerAddress("128.199.185.248", 18117), Arrays.asList(credential));
+//        DB database = mongoo.getDB("TBDG7");
+//        DBCollection collection = database.getCollection("futbol");
+        StatementResult nodo=session.run("MATCH (a:Usuario) RETURN a.name as name ");
+        ArrayList<String> registro = new ArrayList<String>();
+        while(nodo.hasNext()){
+            Record record = nodo.next();
+            String name=  record.get("name").asString();
+            registro.add(name);
 
 
-        ArrayList<String> registro = (ArrayList<String>) collection.distinct("name");
+
+        }
+
         System.out.println("registros listos");
+
+
+
         for (Club equipo: clubs) {
             int[] cantidades= new int[registro.size()];
-            String[] followers= new String[registro.size()];
+
             System.out.println("llegue aca ");
 
             if (equipo.getId() != 17) {
                 ArrayList<Tweet> tweets;
                 String busqueda = equipo.getName();
                 for (Keyword apodo : equipo.getKeywords()) {
-                    busqueda = busqueda + " " + apodo.getName_keyword();
+                    busqueda = busqueda + " OR " + apodo.getName_keyword();
                 }
 
                 System.out.println("%%%%% " + busqueda + "%%%%%%%");
-                tweets = indice.buscar(busqueda);
-                for (Tweet tweet : tweets) {
-                    int i= registro.indexOf(tweet.getName());
-                    cantidades[i]=cantidades[i]+1;
-                    followers[i]=tweet.getFollowers();
+               for (int i=0; i<registro.size();i++){
+                   tweets = indice.buscarUsuario(registro.get(i),busqueda);
+                   System.out.println("%%%%% Estoy buscando tweets para "+ registro.get(i)+" y eqipo"+equipo.getName()+"%%%%%%%%%%%%%");
+                   for(int y=0;y<10;y++){
+                       System.out.println(tweets.get(y).getName()+" "+tweets.size());
+                   }
 
-                }
-                for (int i=0; i<registro.size();i++){
-                    if(cantidades[i]>0){
-                        String query = "match (a:Usuario) where a.name='" + limpiar(registro.get(i)) + "' "
-                                + "  match (b:Club) where b.name='" + equipo.getName() + "' "
-                                + "  create (a)-[r:Tweet {texto:'" + cantidades[i] + "'" + ", followers:'" +followers[i] + "'}]->(b)";
-                        session.run(query);
-                    }
-                }
+                   cantidades[i]=tweets.size();
+               }
+                System.out.println("%%%%% catidades listas $$$$");
+
+//                for (int i=0; i<registro.size();i++){
+//                    if(cantidades[i]>0){
+//                        String query = "match (a:Usuario) where a.name='" + registro.get(i) + "' "
+//                                + "  match (b:Club) where b.name='" + equipo.getName() + "' "
+//                                + "  create (a)-[r:Tweet {texto:" + cantidades[i]+ "}]->(b)";
+//                        session.run(query);
+//                    }
+//                }
 
             }
+            System.out.println("equipo terminado");
         }
         System.out.println("club terminado");
 

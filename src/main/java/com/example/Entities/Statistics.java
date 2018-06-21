@@ -1,5 +1,6 @@
 package com.example.Entities;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -9,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name="Statistics")
+@Table(name="St2")
 public class Statistics implements Serializable {
 
 
@@ -32,6 +33,10 @@ public class Statistics implements Serializable {
 
     @Column(name = "last_update", nullable = false)
     private Timestamp lastUpdate;
+
+    @ManyToOne
+    @JoinColumn(name="club_id")
+    private Club club;
 
     public Statistics() {
     }

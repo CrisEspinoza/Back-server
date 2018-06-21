@@ -43,7 +43,7 @@ public class Indice{
 
     public void indexar() {
         try {
-            Directory dir = FSDirectory.open(Paths.get("index/"));
+            Directory dir = FSDirectory.open(Paths.get("index1/"));
             Analyzer analyzer = new StandardAnalyzer();
             IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
 
@@ -64,7 +64,7 @@ public class Indice{
                 // los  StringField son mas orientados a informacion
                 // los textfield es lo que se  tokenizara
                 doc.add(new StringField("id", elemento.get("_id").toString(), Field.Store.YES));
-                doc.add(new StringField("name", elemento.get("name").toString(), Field.Store.YES));
+                doc.add(new TextField("name", elemento.get("name").toString(), Field.Store.YES));
                 doc.add(new StringField("followers", elemento.get("followers").toString(), Field.Store.YES));
                 doc.add(new TextField("text", elemento.get("text").toString(), Field.Store.YES));
                 if (writer.getConfig().getOpenMode() == OpenMode.CREATE) {
@@ -89,7 +89,7 @@ public class Indice{
         try {
 
 
-            IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get("index/")));
+            IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get("index1/")));
             IndexSearcher searcher = new IndexSearcher(reader);
             Analyzer analyzer = new StandardAnalyzer();
 
@@ -116,6 +116,43 @@ public class Indice{
             e.printStackTrace();
         }
         System.out.println("Datos encontrado para esta consulta"+tweets.size());
+
+        return tweets;
+    }
+
+    public  ArrayList<Tweet >  buscarUsuario(String name,String equipo){
+        ArrayList<Tweet > tweets = new ArrayList<Tweet>();
+
+        try {
+
+
+            IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get("index1/")));
+            IndexSearcher searcher = new IndexSearcher(reader);
+            Analyzer analyzer = new StandardAnalyzer();
+
+            QueryParser parser = new QueryParser("name", analyzer);
+            Query query = parser.parse("name:"+name+" AND text:"+equipo);
+
+            TopDocs results = searcher.search(query,100);
+            ScoreDoc[] hits = results.scoreDocs;
+//            System.out.println(hits.length);
+            for(int i = 0; i < hits.length; i++) {
+                Document doc = searcher.doc(hits[i].doc);
+                //String id_salida = doc.get("id");
+                //System.out.println(id_salida);
+                Tweet tw= new Tweet(doc.get("text"),doc.get("name"),doc.get("followers"));
+                tweets.add(tw);
+            }
+            reader.close();
+
+
+        }
+        catch(IOException ioe) {
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+//        System.out.println("Datos encontrado para esta consulta"+tweets.size());
 
         return tweets;
     }
