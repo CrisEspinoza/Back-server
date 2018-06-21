@@ -55,8 +55,7 @@ public class    schedulerAnalisis {
 //        this.analisisGrafo();
         //this.analisisGeneral();
 
-        this.analisisEspecifico();
-        Thread.sleep(900000000);
+        //this.analisisEspecifico();
 
     }
 

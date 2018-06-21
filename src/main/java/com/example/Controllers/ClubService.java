@@ -18,8 +18,6 @@ import java.util.List;
 @RequestMapping("/club")
 public class ClubService {
 
-
-
     @Autowired
     private ClubRepository clubRepository;
 

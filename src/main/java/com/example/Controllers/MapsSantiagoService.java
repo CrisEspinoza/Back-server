@@ -21,6 +21,7 @@ public class MapsSantiagoService {
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
     public List<MapsSantiago> getAllMaps() {
+
         List<MapsSantiago> maps= mapsSantiagoRepository.findAll();
         maps.sort(Comparator.comparing(MapsSantiago::getIdComuna));
 
@@ -30,9 +31,6 @@ public class MapsSantiagoService {
             mapsFinal.add(maps.get(i));
         }
 
-
         return mapsFinal;
     }
-
-
 }
