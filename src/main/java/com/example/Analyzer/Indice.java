@@ -34,8 +34,8 @@ import org.apache.lucene.search.TopDocs;
 
 public class Indice{
 
-    MongoCredential credential = MongoCredential.createCredential("TBDG7", "TBDG7", "Antihackers".toCharArray());
-         MongoClient mongoClient = new MongoClient(new ServerAddress("159.65.198.230", 18117), Arrays.asList(credential));
+    MongoCredential credential = MongoCredential.createCredential("TbdG7", "TBDG7", "antiHackers2.0".toCharArray());
+    MongoClient mongoClient = new MongoClient(new ServerAddress("128.199.185.248", 18117), Arrays.asList(credential));
     DB db = mongoClient.getDB("TBDG7");
     DBCollection collection = db.getCollection("futbol");
     DBCursor cursor = collection.find();
@@ -96,7 +96,7 @@ public class Indice{
             QueryParser parser = new QueryParser("text", analyzer);
             Query query = parser.parse(equipo);
 
-            TopDocs results = searcher.search(query,300000);
+            TopDocs results = searcher.search(query,2500);
             ScoreDoc[] hits = results.scoreDocs;
             System.out.println(hits.length);
             for(int i = 0; i < hits.length; i++) {
@@ -131,9 +131,9 @@ public class Indice{
             Analyzer analyzer = new StandardAnalyzer();
 
             QueryParser parser = new QueryParser("name", analyzer);
-            Query query = parser.parse("name:"+name+" AND (text:"+equipo+")");
+            Query query = parser.parse("name:"+name+" AND text:"+equipo);
 
-            TopDocs results = searcher.search(query,300000);
+            TopDocs results = searcher.search(query,100);
             ScoreDoc[] hits = results.scoreDocs;
 //            System.out.println(hits.length);
             for(int i = 0; i < hits.length; i++) {

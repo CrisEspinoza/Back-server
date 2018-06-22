@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name="statistics")
+@Table(name="St2")
 public class Statistics implements Serializable {
 
 

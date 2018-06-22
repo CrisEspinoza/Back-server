@@ -7,7 +7,9 @@ import com.mongodb.*;
 import org.neo4j.driver.v1.*;
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Neo4j {
     private Driver driver;
@@ -44,27 +46,33 @@ public class Neo4j {
     }
 
     public void crearNodoUsuarios(){
-        MongoCredential credential = MongoCredential.createCredential("TBDG7", "TBDG7", "Antihackers".toCharArray());
-        MongoClient mongoo = new MongoClient(new ServerAddress("159.65.198.230", 18117), Arrays.asList(credential));
+        MongoCredential credential = MongoCredential.createCredential("TbdG7", "TBDG7", "antiHackers2.0".toCharArray());
+        MongoClient mongoo = new MongoClient(new ServerAddress("128.199.185.248", 18117), Arrays.asList(credential));
         DB database = mongoo.getDB("TBDG7");
         DBCollection collection = database.getCollection("futbol");
 
-        DBObject group = new BasicDBObject("$group", new BasicDBObject("_id", "$name")
-                .append("seguidores", new BasicDBObject("$avg", "$followers")));
 
-        DBObject sort = new BasicDBObject("$sort", new BasicDBObject("seguidores", -1));
-        DBObject limit= new BasicDBObject("$limit",1000);
-        AggregationOutput output = collection.aggregate(group,sort,limit);
-        int cantidad =output.hashCode();
-                int i=0;
-        for (DBObject result : output.results()) {
-//            System.out.println(result);
-            i++;
-            session.run("create (a:Usuario {name:'"+limpiar(result.get("_id").toString())+"', followers:"+result.get("seguidores")+"})");
-        }
+        ArrayList<String> registro = (ArrayList<String>) collection.distinct("name");
 //
+        for(String nombre: registro){
 
-        System.out.println("Usuarios agregados--"+i+"--"+cantidad);
+            DBCursor cur= collection.find(new BasicDBObject("name", nombre));
+            if(cur.hasNext()){
+                DBObject dato = cur.next();
+                int followers= (int) dato.get("followers");
+                if(followers >20000){
+                    session.run("create (a:Usuario {name:'"+limpiar(nombre)+"', followers:"+followers+"})");
+                }
+
+            }
+//            if (!registro.contains(nombre)) {
+//                registro.add(nombre);
+
+
+
+//            }
+        }
+        System.out.println("Usuarios agregados");
         mongoo.close();
     }
 
@@ -105,9 +113,6 @@ public class Neo4j {
         nombre=nombre.replace(".","");
         nombre=nombre.replace("_","");
         nombre=nombre.replace("-","");
-        if(nombre.equals("AND Noticias")){
-            nombre=nombre.replace("AND","and");
-        }
         return nombre;
     }
 
@@ -149,20 +154,23 @@ public class Neo4j {
                 System.out.println("%%%%% " + busqueda + "%%%%%%%");
                for (int i=0; i<registro.size();i++){
                    tweets = indice.buscarUsuario(registro.get(i),busqueda);
-//                   System.out.println("%%%%% Estoy buscando tweets para "+ registro.get(i)+" y eqipo"+equipo.getName()+"%%%%%%%%%%%%%");
+                   System.out.println("%%%%% Estoy buscando tweets para "+ registro.get(i)+" y eqipo"+equipo.getName()+"%%%%%%%%%%%%%");
+                   for(int y=0;y<10;y++){
+                       System.out.println(tweets.get(y).getName()+" "+tweets.size());
+                   }
 
                    cantidades[i]=tweets.size();
                }
                 System.out.println("%%%%% catidades listas $$$$");
 
-                for (int i=0; i<registro.size();i++){
-                    if(cantidades[i]>0){
-                        String query = "match (a:Usuario) where a.name='" + registro.get(i) + "' "
-                                + "  match (b:Club) where b.name='" + equipo.getName() + "' "
-                                + "  create (a)-[r:Tweet {texto:" + cantidades[i]+ "}]->(b)";
-                        session.run(query);
-                    }
-                }
+//                for (int i=0; i<registro.size();i++){
+//                    if(cantidades[i]>0){
+//                        String query = "match (a:Usuario) where a.name='" + registro.get(i) + "' "
+//                                + "  match (b:Club) where b.name='" + equipo.getName() + "' "
+//                                + "  create (a)-[r:Tweet {texto:" + cantidades[i]+ "}]->(b)";
+//                        session.run(query);
+//                    }
+//                }
 
             }
             System.out.println("equipo terminado");
@@ -171,52 +179,27 @@ public class Neo4j {
 
     }
 
-    public float[]  getInfluencia(String usuario,String club ){
+    public int[]  getInfluencia(String usuario,String club ){
             String query ="MATCH p=(u:Usuario)-[r:Tweet]->(c:Club) where u.name='"+limpiar(usuario)+"' and c.name='"+club+"' " +
-                    "RETURN u.followers as seguidores, r.texto as cantidad";
+                    "RETURN r.followers as seguidores, r.texto as cantidad";
             StatementResult nodo=session.run(query);
-            float[] resultado = new float[2];
+            int[] resultado = new int[2];
             if(nodo.hasNext()){
                 Record record = nodo.next();
-                float  seguidores= Float.parseFloat(String.valueOf(record.get("seguidores")));
-               float cantidad= record.get("cantidad").asFloat();
+                String seguidores=  record.get("seguidores").asString();
+                String cantidad= record.get("cantidad").asString();
 
-                resultado[0] = seguidores;
-                resultado[1]= cantidad;
-                return resultado;
+                resultado[0] = Integer.parseInt(seguidores);
+                resultado[1]= Integer.parseInt(cantidad);
+
 
             }else{
-                return null;
+                resultado[0] =1;
+                resultado[1]= 1;
             }
 
+            return resultado;
 
 
-
-    }
-
-    private Map<String, Object> mapTriple(String key1, Object value1, String key2, Object value2,String key3, Object value3) {
-        Map<String, Object> result = new HashMap<String, Object>(3);
-        result.put(key1, value1);
-        result.put(key2, value2);
-        result.put(key3, value3);
-        return result;
-    }
-
-
-
-    public List<Map<String, Object>> getUsuariosInfluyentes(String equipo){
-
-        List<Map<String, Object>> lista = new ArrayList<>();
-        String query ="MATCH p=(u:Usuario)-[r:Tweet]->(c:Club) where  c.name='"+equipo+"' " +
-                "RETURN u.name as name u.followers as seguidores, r.texto as cantidad";
-        StatementResult nodo=session.run(query);
-
-        while(nodo.hasNext())
-        {
-            Record record = nodo.next();
-            lista.add(mapTriple("name", record.get("name").toString(), "seguidores", record.get("followers").toString(), "cantidad", record.get("cantidad").asDouble() ));
-        }
-
-        return lista;
     }
 }
