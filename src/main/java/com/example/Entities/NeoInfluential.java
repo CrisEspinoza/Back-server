@@ -3,77 +3,88 @@ package com.example.Entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
 @Table(name="NeoInfluential")
-public class NeoInfluential {
+public class NeoInfluential implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "neo_id")
     @JsonIgnore
-    private Long idUser;
+    private Long id;
 
-    @Column(nullable = false)
-    private Long statistic_x;
+    @Column()
+    private int statistic_x;
 
-    @Column(nullable = false)
-    private Long statistic_y;
+    @Column()
+    private int statistic_y;
 
-    @Column(nullable = false)
+    @Column()
 
-    private Long statistic_r;
+    private float statistic_r;
 
-    @Column(nullable = false)
-    private String firstNameUser;
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @JoinColumn(name ="influyente_id")
+    private List<UsuarioInfluyente> usuariosInfluyentes;
 
-    @Column(nullable = false)
-    private String firstNameClub;
+    public NeoInfluential() {
+        this.usuariosInfluyentes = new ArrayList<UsuarioInfluyente>();
+    }
 
-    @Column(nullable = false)
-    private Long positive_value;
-
-    @Column(nullable = false)
-    private Long negative_value;
-
-    @Column(name = "last_update", nullable = false)
+    @Column(name = "last_update")
     private Timestamp lastUpdate;
 
-    public Long getIdUser() { return idUser;}
+    public Long getIdNeo() {
+        return id;
+    }
 
-    public void setIdUser(Long idUser) { this.idUser = idUser;}
+    public void setIdNeo(Long idNeo) {
+        this.id = idNeo;
+    }
 
-    public String getFirstNameUser() { return firstNameUser;}
+    public int getStatistic_x() {
+        return statistic_x;
+    }
 
-    public Long getStatistic_x() {return statistic_x;}
+    public void setStatistic_x(int statistic_x) {
+        this.statistic_x = statistic_x;
+    }
 
-    public void setStatistic_x(Long statistic_x) {this.statistic_x = statistic_x;}
+    public int getStatistic_y() {
+        return statistic_y;
+    }
 
-    public Long getStatistic_y() {return statistic_y;}
+    public void setStatistic_y(int statistic_y) {
+        this.statistic_y = statistic_y;
+    }
 
-    public void setStatistic_y(Long statistic_y) {this.statistic_y = statistic_y;}
+    public float getStatistic_r() {
+        return statistic_r;
+    }
 
-    public Long getStatistic_r() { return statistic_r;}
+    public void setStatistic_r(float statistic_r) {
+        this.statistic_r = statistic_r;
+    }
 
-    public void setStatistic_r(Long statistic_r) {this.statistic_r = statistic_r;}
+    public List<UsuarioInfluyente> getUsuariosInfluyentes() {
+        return usuariosInfluyentes;
+    }
 
-    public void setFirstNameUser(String firstNameUser) {this.firstNameUser = firstNameUser;}
+    public void setUsuariosInfluyentes(List<UsuarioInfluyente> usuariosInfluyentes) {
+        this.usuariosInfluyentes = usuariosInfluyentes;
+    }
 
-    public String getFirstNameClub() {return firstNameClub;}
+    public Timestamp getLastUpdate() {
+        return lastUpdate;
+    }
 
-    public void setFirstNameClub(String firstNameClub) {this.firstNameClub = firstNameClub;}
-
-    public Long getPositive_value() {return positive_value;}
-
-    public void setPositive_value(Long positive_value) {this.positive_value = positive_value;}
-
-    public Long getNegative_value() {return negative_value;}
-
-    public void setNegative_value(Long negative_value) {this.negative_value = negative_value; }
-
-    public Timestamp getLastUpdate() {return lastUpdate;}
-
-    public void setLastUpdate(Timestamp lastUpdate) {this.lastUpdate = lastUpdate;}
+    public void setLastUpdate(Timestamp lastUpdate) {
+        this.lastUpdate = lastUpdate;
+    }
 }

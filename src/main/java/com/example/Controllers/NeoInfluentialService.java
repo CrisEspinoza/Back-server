@@ -1,7 +1,11 @@
 package com.example.Controllers;
 
+import com.example.Analyzer.Neo4j;
+import com.example.Entities.Club;
 import com.example.Entities.Maps;
 import com.example.Entities.NeoInfluential;
+import com.example.Entities.UsuarioInfluyente;
+import com.example.Repositories.ClubRepository;
 import com.example.Repositories.NeoInfluentialRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,19 +21,37 @@ public class NeoInfluentialService {
 
     @Autowired
     private NeoInfluentialRepository neoInfluentialRepository;
+    @Autowired
+    private ClubRepository clubRepository;
 
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
     public List<NeoInfluential> getAllNeoInfluential() {
         List<NeoInfluential> neo = neoInfluentialRepository.findAll();
-        neo.sort(Comparator.comparing(NeoInfluential::getIdUser));
 
-        ArrayList<NeoInfluential> neoFinal= new ArrayList<NeoInfluential>();
+        return neo;
+    }
 
-        for (int i=neo.size()-1;i>neo.size()-5;i--){
-            neoFinal.add(neo.get(i));
-        }
+    @GetMapping("/{id}")
+    @ResponseBody
+    public NeoInfluential getIdNeoInfluential(@PathVariable("id") Long id) {
 
-        return neoFinal;
+        Club club = clubRepository.findClubById(id);
+//        System.out.println("%%%%%%%%%%%%%el club solicitdo es :"+club.getName());
+//        NeoInfluential neoI= neoInfluentialRepository.findNeoInfluentialById(club.getNeonInfluential().getIdNeo());
+//        System.out.println(neoI.getLastUpdate());
+        return club.getNeonInfluential();
+    }
+
+
+
+    @GetMapping("/mayor-seguidores")
+    @ResponseBody
+    public ArrayList<UsuarioInfluyente> getMayorSeguidores() {
+        Neo4j neo = new Neo4j();
+        neo.connect("bolt://178.62.215.252","neo4j","TBDG7");
+        ArrayList<UsuarioInfluyente> respuesta = neo.getUsuariosMasInfluyentes();
+
+        return respuesta;
     }
 }

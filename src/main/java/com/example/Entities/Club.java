@@ -41,6 +41,15 @@ public class Club implements Serializable {
     @JoinColumn(name ="club_id")
     private Set<Keyword> keywords;
 
+
+
+    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER,orphanRemoval=true,optional=false)
+    @JoinColumn(name ="neoInf_id")
+    @JsonIgnore
+    private NeoInfluential neonInfluential;
+
+
+
     @ManyToOne
     @JsonIgnore
     @JoinColumn(name="commune_id")
@@ -116,5 +125,13 @@ public class Club implements Serializable {
         return lastUpdate;
     }
     private static final long serialVersionUID = 1L;
+
+    public NeoInfluential getNeonInfluential() {
+        return neonInfluential;
+    }
+
+    public void setNeonInfluential(NeoInfluential neonInfluential) {
+        this.neonInfluential = neonInfluential;
+    }
 }
 
