@@ -127,6 +127,15 @@ public class Club implements Serializable {
     private static final long serialVersionUID = 1L;
 
     public NeoInfluential getNeonInfluential() {
+
+        for (UsuarioInfluyente userI: this.neonInfluential.getUsuariosInfluyentes()) {
+
+            userI.setFollowers(Math.round(userI.getFollowers()));
+
+        }
+
+
+
         return neonInfluential;
     }
 

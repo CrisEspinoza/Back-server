@@ -20,6 +20,8 @@ public class NeoInfluential implements Serializable {
     private Long id;
 
     @Column()
+    private String nameClub;
+    @Column()
     private int statistic_x;
 
     @Column()
@@ -86,5 +88,28 @@ public class NeoInfluential implements Serializable {
 
     public void setLastUpdate(Timestamp lastUpdate) {
         this.lastUpdate = lastUpdate;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNameClub() {
+        return nameClub;
+    }
+
+    public void setNameClub(String nameClub) {
+        this.nameClub = nameClub;
+    }
+
+    public void setSegInfluyentes() {
+        for (UsuarioInfluyente userI: this.usuariosInfluyentes) {
+            userI.setFollowers(Math.round(userI.getFollowers()));
+
+        }
     }
 }
