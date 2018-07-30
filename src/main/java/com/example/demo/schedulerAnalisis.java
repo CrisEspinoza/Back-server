@@ -53,7 +53,7 @@ public class    schedulerAnalisis {
 
 
 
-    @Scheduled(cron = "0 0 * * * * ")
+    @Scheduled(fixedRate = 1000000000)
     public void analizador() throws IOException, InterruptedException {
 
 //        this.analisisGrafo();
@@ -70,13 +70,13 @@ public class    schedulerAnalisis {
         System.out.println("INICIOOOOOOOOOO");
         Neo4j neo = new Neo4j();
         neo.connect("bolt://178.62.215.252","neo4j","TBDG7");
-        neo.deleteAll();
+//        neo.deleteAll();
 //        System.out.println("CONECTADOO");
 
 
-      neo.crearNodosEquipos(clubRepository.findAll());
+//      neo.crearNodosEquipos(clubRepository.findAll());
 //        System.out.println("NODO EQUIPO CREADO");
-        neo.crearNodoUsuarios();
+//        neo.crearNodoUsuarios();
         neo.relacionarTweet(clubRepository.findAll());
         System.out.println("TERMINOOOOOO");
         //Thread.sleep(900000000);
@@ -301,11 +301,11 @@ public class    schedulerAnalisis {
 //                            influencia= 2.0;
                         if (resultado.get("positive") > resultado.get("negative")) {
 
-                            acumulador[0] += 1.0 + (((Double) influyentes.get(i).get("seguidores") / 3335299.440625) * 0.7 + ((Double) influyentes.get(i).get("cantidad")) / 15) * 0.3;
+                            acumulador[0] += 1.0 + (((Double) influyentes.get(i).get("seguidores") / 3327729.8865619544) * 0.7 + ((Double) influyentes.get(i).get("cantidad")) / 2000) * 0.3;
                         } else if (resultado.get("positive") < resultado.get("negative")) {
-                            acumulador[1] += 1.0 + (((Double) influyentes.get(i).get("seguidores") / 3335299.440625) * 0.7 + ((Double) influyentes.get(i).get("cantidad")) / 15) * 0.3;
+                            acumulador[1] += 1.0 + (((Double) influyentes.get(i).get("seguidores") /3327729.8865619544) * 0.7 + ((Double) influyentes.get(i).get("cantidad")) / 2000) * 0.3;
                         } else {
-                            acumulador[2] += 1.0 + (((Double) influyentes.get(i).get("seguidores") / 3335299.440625) * 0.7 + ((Double) influyentes.get(i).get("cantidad")) / 15) * 0.3;
+                            acumulador[2] += 1.0 + (((Double) influyentes.get(i).get("seguidores") / 3327729.8865619544) * 0.7 + ((Double) influyentes.get(i).get("cantidad")) / 2000) * 0.3;
                         }
 
 
@@ -341,6 +341,7 @@ public class    schedulerAnalisis {
                 NeoInfluential neoI =  new NeoInfluential();
                 neoI.setStatistic_x(acumulador[0]);
                 neoI.setStatistic_y( acumulador[1]);
+                neoI.setNameClub(equipo.getName());
                 equipo.setNeonInfluential(neoI);
 
                 equipo.getStatistics().add(statistics);
@@ -391,7 +392,9 @@ public class    schedulerAnalisis {
                 equipo.getNeonInfluential().setStatistic_r(razon);
                 equipo.getNeonInfluential().setLastUpdate(new Timestamp(time));
             for (UsuarioInfluyente influencia : influencias) {
-                influencia.setRazon(getRazon(busqueda, influencia.getName()));
+                int[] cantidades=getRazon(busqueda, influencia.getName());
+                influencia.setCantidadPositivos(cantidades[0]);
+                influencia.setCantidadNegativos(cantidades[1]);
                 System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" + influencia.getRazon() + " " + influencia.getName());
                 equipo.getNeonInfluential().getUsuariosInfluyentes().add(influencia);
             }
@@ -424,7 +427,7 @@ public class    schedulerAnalisis {
     }
 
 
-    public   String getRazon(String equipo, String name) {
+    public  int[] getRazon(String equipo, String name) {
         int positivos=0;
         int negativos=0;
         int neutros=0;
@@ -444,16 +447,19 @@ public class    schedulerAnalisis {
                 neutros += 1;
             }
         }
-
-        if(positivos>negativos && positivos>neutros){
-            return "positivo";
-        }
-        else if(negativos>positivos && negativos>neutros){
-            return "negativo";
-        }
-        else{
-            return "neutro";
-        }
+        int[] salida= new int[2];
+        salida[0]=positivos;
+        salida[1]=negativos;
+//        if(positivos>negativos && positivos>neutros){
+//            return "positivo";
+//        }
+//        else if(negativos>positivos && negativos>neutros){
+//            return "negativo";
+//        }
+//        else{
+//            return "neutro";
+//        }
+        return salida;
 
     }
 

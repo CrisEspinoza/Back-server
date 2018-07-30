@@ -19,13 +19,35 @@ public class UsuarioInfluyente  implements Serializable {
     @Column(nullable = false)
     private double followers;
     @Column(nullable = false)
-    private double  cantidad;
+    private double  cantidadPositivos;
+
+    @Column(nullable = false)
+    private double  cantidadNegativos;
+
     @Column(nullable = false)
     private double influencia;
     @Column(nullable = false)
     private String razon;
 
+    public double getCantidadPositivos() {
+        return cantidadPositivos;
+    }
 
+    public void setCantidadPositivos(double cantidadPositivos) {
+        this.cantidadPositivos = cantidadPositivos;
+    }
+
+    public double getCantidadNegativos() {
+        return cantidadNegativos;
+    }
+
+    public void setCantidadNegativos(double cantidadNegativos) {
+        this.cantidadNegativos = cantidadNegativos;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 //    public UsuarioInfluyente(String name, double seguidores, double cantidad, double inf) {
 //
 //        this.name=name;
@@ -60,13 +82,7 @@ public class UsuarioInfluyente  implements Serializable {
         this.followers = followers;
     }
 
-    public double getCantidad() {
-        return cantidad;
-    }
 
-    public void setCantidad(double cantidad) {
-        this.cantidad = cantidad;
-    }
 
     public double getInfluencia() {
         return influencia;

@@ -255,11 +255,11 @@ public class Neo4j {
         {
 
             Record record = nodo.next();
-            double inf=  1.0+((  Double.parseDouble(String.valueOf(record.get("seguidores")))/3335299.440625)*0.7+( Double.parseDouble(String.valueOf(record.get("cantidad")))/15)*0.3);
+            double inf=  ((  Double.parseDouble(String.valueOf(record.get("seguidores")))/3327729.8865619544)*0.7+( Double.parseDouble(String.valueOf(record.get("cantidad")))/2000)*0.3);
             UsuarioInfluyente newNeoInf= new UsuarioInfluyente();
             newNeoInf.setName(record.get("name").asString());
             newNeoInf.setFollowers(Double.parseDouble(String.valueOf(record.get("seguidores"))));
-            newNeoInf.setCantidad(Double.parseDouble(String.valueOf(record.get("cantidad"))));
+//            newNeoInf.setCantidad(Double.parseDouble(String.valueOf(record.get("cantidad"))));
             newNeoInf.setInfluencia(inf);
             newNeoInf.setRazon("no definida");
             lista.add(newNeoInf);

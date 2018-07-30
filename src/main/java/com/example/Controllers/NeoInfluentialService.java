@@ -28,7 +28,13 @@ public class NeoInfluentialService {
     @ResponseBody
     public List<NeoInfluential> getAllNeoInfluential() {
         List<NeoInfluential> neo = neoInfluentialRepository.findAll();
+        for (int i=0;i<neo.size();i++) {
+            if(neo.get(i).getId() == 17){
+                neo.remove(i);
+            }
+            neo.get(i).setSegInfluyentes();
 
+        }
         return neo;
     }
 
@@ -40,6 +46,7 @@ public class NeoInfluentialService {
 //        System.out.println("%%%%%%%%%%%%%el club solicitdo es :"+club.getName());
 //        NeoInfluential neoI= neoInfluentialRepository.findNeoInfluentialById(club.getNeonInfluential().getIdNeo());
 //        System.out.println(neoI.getLastUpdate());
+
         return club.getNeonInfluential();
     }
 

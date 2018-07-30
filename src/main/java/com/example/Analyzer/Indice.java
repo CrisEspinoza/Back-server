@@ -98,7 +98,7 @@ public class Indice{
             QueryParser parser = new QueryParser("text", analyzer);
             Query query = parser.parse(equipo);
 
-            TopDocs results = searcher.search(query,10000);
+            TopDocs results = searcher.search(query,310000);
             ScoreDoc[] hits = results.scoreDocs;
             System.out.println(hits.length);
             for(int i = 0; i < hits.length; i++) {
@@ -126,7 +126,11 @@ public class Indice{
         ArrayList<Tweet > tweets = new ArrayList<Tweet>();
 
         try {
-                name=name.replace(" "," AND ");
+
+            name=name.replace("    "," ");
+            name=name.replace("   "," ");
+            name=name.replace("  "," ");
+            name=name.replace(" "," AND ");
 
             IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get("index1/")));
             IndexSearcher searcher = new IndexSearcher(reader);
@@ -135,7 +139,7 @@ public class Indice{
             QueryParser parser = new QueryParser("name", analyzer);
             Query query = parser.parse("(name:"+name+") AND (text:"+equipo+")");
 
-            TopDocs results = searcher.search(query,100);
+            TopDocs results = searcher.search(query,2000);
             ScoreDoc[] hits = results.scoreDocs;
 //            System.out.println(hits.length);
             for(int i = 0; i < hits.length; i++) {
