@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb57eb66-7a55-4fd9-b817-03fbcfba9447" name="Default" comment="">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Entities/Nodo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileContent/fileContent.lock" afterDir="false" />
@@ -45,6 +46,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Entities/UsuarioInfluyente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Entities/UsuarioInfluyente.java" afterDir="false" />
 >>>>>>> 94776bc14006ae7c26689f9cdc9940c26f6ab7f1
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,11 +94,11 @@
                 <element signature="e#1544#1545#0" expanded="true" />
 =======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NeoInfluential.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NeoInfluential.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Entities/NeoInfluential.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="108" column="3" selection-start-line="108" selection-start-column="3" selection-end-line="113" selection-end-column="5" />
+            <state relative-caret-position="1">
+              <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2040#2041#0" expanded="true" />
@@ -125,29 +129,17 @@
       <file leaf-file-name="UsuarioInfluyente.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Entities/UsuarioInfluyente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="934">
+            <state relative-caret-position="1037">
               <caret line="84" selection-start-line="84" selection-end-line="84" />
-              <folding>
-                <element signature="e#736#737#0" expanded="true" />
-                <element signature="e#776#777#0" expanded="true" />
-                <element signature="e#842#843#0" expanded="true" />
-                <element signature="e#900#901#0" expanded="true" />
-                <element signature="e#944#945#0" expanded="true" />
-                <element signature="e#984#985#0" expanded="true" />
-                <element signature="e#1050#1051#0" expanded="true" />
-                <element signature="e#1108#1109#0" expanded="true" />
-                <element signature="e#1156#1157#0" expanded="true" />
-                <element signature="e#1195#1196#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NeoInfluentialService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NeoInfluentialService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Controllers/NeoInfluentialService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="64" lean-forward="true" selection-start-line="16" selection-end-line="64" />
+            <state relative-caret-position="223">
+              <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,7 +159,7 @@
       <file leaf-file-name="Club.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Entities/Club.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
+            <state relative-caret-position="1530">
               <caret line="128" selection-start-line="128" selection-end-line="139" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -179,7 +171,7 @@
       <file leaf-file-name="schedulerAnalisis.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
+            <state relative-caret-position="4811">
               <caret line="303" column="119" selection-start-line="303" selection-start-column="101" selection-end-line="303" selection-end-column="119" />
             </state>
           </provider>
@@ -188,7 +180,7 @@
       <file leaf-file-name="Indice.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Indice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
+            <state relative-caret-position="1887">
               <caret line="141" column="56" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="56" />
             </state>
           </provider>
@@ -197,7 +189,7 @@
       <file leaf-file-name="Neo4j.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Neo4j.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
+            <state relative-caret-position="4250">
               <caret line="257" column="108" selection-start-line="257" selection-start-column="108" selection-end-line="257" selection-end-column="108" />
             </state>
           </provider>
@@ -636,11 +628,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <pane id="Scope" />
       <pane id="PackagesPane" />
 =======
       <pane id="AndroidView" />
+=======
+      <pane id="PackagesPane" />
+>>>>>>> Stashed changes
       <pane id="Scope" />
 >>>>>>> 94776bc14006ae7c26689f9cdc9940c26f6ab7f1
       <pane id="ProjectPane">
@@ -689,11 +685,15 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <pane id="AndroidView" />
 =======
       <pane id="PackagesPane" />
 >>>>>>> 94776bc14006ae7c26689f9cdc9940c26f6ab7f1
+=======
+      <pane id="AndroidView" />
+>>>>>>> Stashed changes
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -777,6 +777,7 @@
     <option name="totallyTimeSpent" value="2865000" />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
@@ -815,6 +816,10 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
 =======
     <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
+=======
+    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
+    <editor active="true" />
+>>>>>>> Stashed changes
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -823,19 +828,19 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3369735" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3369735" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24621212" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1400,38 +1405,28 @@
             <element signature="e#1544#1545#0" expanded="true" />
 =======
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
+        <state relative-caret-position="1887">
           <caret line="141" column="56" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/schedulerAnalisis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
+        <state relative-caret-position="4811">
           <caret line="303" column="119" selection-start-line="303" selection-start-column="101" selection-end-line="303" selection-end-column="119" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Analyzer/Neo4j.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
+        <state relative-caret-position="4250">
           <caret line="257" column="108" selection-start-line="257" selection-start-column="108" selection-end-line="257" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Controllers/NeoInfluentialService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" lean-forward="true" selection-start-line="16" selection-end-line="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Entities/Club.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
+        <state relative-caret-position="1530">
           <caret line="128" selection-start-line="128" selection-end-line="139" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1441,27 +1436,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Entities/UsuarioInfluyente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="934">
+        <state relative-caret-position="1037">
           <caret line="84" selection-start-line="84" selection-end-line="84" />
-          <folding>
-            <element signature="e#736#737#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
-            <element signature="e#900#901#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#984#985#0" expanded="true" />
-            <element signature="e#1050#1051#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1156#1157#0" expanded="true" />
-            <element signature="e#1195#1196#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Entities/NeoInfluential.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="108" column="3" selection-start-line="108" selection-start-column="3" selection-end-line="113" selection-end-column="5" />
+        <state relative-caret-position="1">
+          <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2040#2041#0" expanded="true" />
@@ -1473,6 +1456,16 @@
             <element signature="e#2241#2242#0" expanded="true" />
             <element signature="e#2281#2282#0" expanded="true" />
 >>>>>>> 94776bc14006ae7c26689f9cdc9940c26f6ab7f1
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/Controllers/NeoInfluentialService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

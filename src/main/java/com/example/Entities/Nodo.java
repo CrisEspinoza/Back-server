@@ -1,5 +1,7 @@
 package com.example.Entities;
 
+import java.util.ArrayList;
+
 public class Nodo {
 
     private String id;
@@ -8,15 +10,15 @@ public class Nodo {
     private int size;
     private String image;
 
-    public Nodo(String id, int x, int y, int size, String image) {
+    public Nodo(String id, int x, int y, float razon, String image) {
         this.id = id;
         this.x = x;
         this.y = y;
-        this.size = genRadio(size);
+        this.size = genRadio(razon);
         this.image = image;
     }
 
-    public int genRadio (int value ) {
+    public int genRadio (float value ) {
 
         if(value < 0.1)
             return 5;
@@ -80,5 +82,17 @@ public class Nodo {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public static int buscarNodo(ArrayList<Nodo> nodos,Nodo usuario){
+        int i=0;
+        for (Nodo buscado: nodos) {
+            if(buscado.getId().equals(usuario.getId())){
+                return i;
+            }
+            i++;
+
+        }
+        return -1;
     }
 }

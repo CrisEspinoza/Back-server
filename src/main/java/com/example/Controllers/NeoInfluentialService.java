@@ -1,18 +1,15 @@
 package com.example.Controllers;
 
 import com.example.Analyzer.Neo4j;
-import com.example.Entities.Club;
-import com.example.Entities.Maps;
-import com.example.Entities.NeoInfluential;
-import com.example.Entities.UsuarioInfluyente;
+import com.example.Entities.*;
 import com.example.Repositories.ClubRepository;
 import com.example.Repositories.NeoInfluentialRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+
+import static jdk.nashorn.internal.objects.NativeFunction.function;
 
 @CrossOrigin
 @RestController
@@ -60,5 +57,65 @@ public class NeoInfluentialService {
         ArrayList<UsuarioInfluyente> respuesta = neo.getUsuariosMasInfluyentes();
 
         return respuesta;
+    }
+
+
+
+    @GetMapping("/grafo")
+    @ResponseBody
+    public   Map<String,Object> getGrafo(){
+        System.out.println("****definiendo variables*****");
+        List<Club>  equipos= clubRepository.findAll();
+        ArrayList<Nodo> nodos = new ArrayList<Nodo>();
+        ArrayList<Link> links = new ArrayList<Link>();
+
+        int i =1;
+        int indiceEquipo=1;
+        int count=0;
+        int countEquipo=0;
+        System.out.println("****iniciando bucle*****");
+        for (Club equipo: equipos) {
+            if(equipo.getId()<17) {
+
+
+                //AGREGO EQUIPO
+
+                nodos.add(new Nodo(equipo.getName(), i, 8, equipo.getNeonInfluential().getStatistic_r(), equipo.getUrl()));
+                countEquipo=count;
+                System.out.println("****agregando equipo*****");
+                count++;
+                i++;
+                int y = 1;
+                for (UsuarioInfluyente user : equipo.getNeonInfluential().getUsuariosInfluyentes()) {
+
+                    Nodo nuevoNodo = new Nodo(user.getName(), indiceEquipo, y, Math.round(user.getFollowers() / 3327729.8865619544), null);
+//                int pos=nodos.indexOf(nuevoNodo);
+                    int pos = Nodo.buscarNodo(nodos, nuevoNodo);
+                    if (pos < 0) {
+
+
+                        nodos.add(nuevoNodo);
+                        System.out.println("****agregando usuario*****");
+
+                        links.add(new Link(countEquipo, count));
+                        System.out.println("****agregando link*****");
+                        y++;
+                        count++;
+                    } else {
+                        links.add(new Link(countEquipo, pos));
+                    }
+
+                }
+                indiceEquipo++;
+
+            }
+        }
+        System.out.println("****generando salida*****");
+
+        Map<String,Object> salida = new HashMap<String,Object>();
+        salida.put("nodos",nodos);
+        salida.put("links",links);
+
+        return salida;
     }
 }
