@@ -59,7 +59,7 @@ public class    schedulerAnalisis {
 //        this.analisisGrafo();
 //        this.analisisGeneral();
 
-        this.analisisEspecifico();
+     //   this.analisisEspecifico();
 //        Thread.sleep(900000000);
 
 
