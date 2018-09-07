@@ -15,13 +15,13 @@ public class Neo4j {
     @Autowired
     private Classifier classifier;
 
-    public void connect(String uri, String username, String password) {
+    public void connect(String uri, String username) {
         /*
             uriConnection = bolt://localhost
             username = neo4j
             password = root -> cambiar contraseña si usaron otra.
         */
-        this.driver = GraphDatabase.driver(uri, AuthTokens.basic(username, password));
+        this.driver = GraphDatabase.driver(uri);
         this.session = driver.session();
     }
 
@@ -45,9 +45,10 @@ public class Neo4j {
     }
 
     public void crearNodoUsuarios(){
-        MongoCredential credential = MongoCredential.createCredential("TBDG7", "TBDG7", "Antihackers".toCharArray());
-        MongoClient mongoo = new MongoClient(new ServerAddress("159.65.198.230", 18117), Arrays.asList(credential));
-        DB database = mongoo.getDB("TBDG7");
+        MongoCredential credential = MongoCredential.createCredential("TBDG7A", "TBDG7-A", "antihackers3.0".toCharArray());
+        MongoClient mongoo = new MongoClient(new ServerAddress("178.128.222.125", 18117), Arrays.asList(credential));
+
+        DB database = mongoo.getDB("TBDG7-A");
         DBCollection collection = database.getCollection("futbol");
 
 

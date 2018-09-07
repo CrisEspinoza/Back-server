@@ -41,6 +41,15 @@ public class Club implements Serializable {
     @JoinColumn(name ="club_id")
     private Set<Keyword> keywords;
 
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @JoinColumn(name="club_id")
+    private List<Maps> mapasRegion;
+
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @JoinColumn(name="club_id")
+    private List<MapsSantiago> mapasComunas;
+
+
 
 
     @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER,orphanRemoval=true,optional=false)
@@ -141,6 +150,26 @@ public class Club implements Serializable {
 
     public void setNeonInfluential(NeoInfluential neonInfluential) {
         this.neonInfluential = neonInfluential;
+    }
+
+    public List<Maps> getMapasRegion() {
+        return mapasRegion;
+    }
+
+    public void setMapasRegion(List<Maps> mapasRegion) {
+        this.mapasRegion = mapasRegion;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public List<MapsSantiago> getMapasComunas() {
+        return mapasComunas;
+    }
+
+    public void setMapasComunas(List<MapsSantiago> mapasComunas) {
+        this.mapasComunas = mapasComunas;
     }
 }
 

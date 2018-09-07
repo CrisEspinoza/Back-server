@@ -59,7 +59,7 @@ public class    schedulerAnalisis {
 //        this.analisisGrafo();
 //        this.analisisGeneral();
 
-     //   this.analisisEspecifico();
+        this.analisisEspecifico();
 //        Thread.sleep(900000000);
 
 
@@ -69,14 +69,14 @@ public class    schedulerAnalisis {
     public void analisisGrafo() throws InterruptedException {
         System.out.println("INICIOOOOOOOOOO");
         Neo4j neo = new Neo4j();
-        neo.connect("bolt://178.62.215.252","neo4j","TBDG7");
-//        neo.deleteAll();
+        neo.connect("bolt://178.128.60.200","neo4j");
+        neo.deleteAll();
 //        System.out.println("CONECTADOO");
 
 
-//      neo.crearNodosEquipos(clubRepository.findAll());
+      neo.crearNodosEquipos(clubRepository.findAll());
 //        System.out.println("NODO EQUIPO CREADO");
-//        neo.crearNodoUsuarios();
+        neo.crearNodoUsuarios();
         neo.relacionarTweet(clubRepository.findAll());
         System.out.println("TERMINOOOOOO");
         //Thread.sleep(900000000);
@@ -88,48 +88,43 @@ public class    schedulerAnalisis {
 
 
 
-        MongoCredential credential = MongoCredential.createCredential("TBDG7", "TBDG7", "Antihackers".toCharArray());
-        MongoClient mongoClient = new MongoClient(new ServerAddress("159.65.198.230", 18117), Arrays.asList(credential));
+        MongoCredential credential = MongoCredential.createCredential("TBDG7A", "TBDG7-A", "antihackers3.0".toCharArray());
+        MongoClient mongoClient = new MongoClient(new ServerAddress("178.128.222.125", 18117), Arrays.asList(credential));
 
-        DB db = mongoClient.getDB("TBDG7");
+        DB db = mongoClient.getDB("TBDG7-A");
         DBCollection collection  = db.getCollection("futbol");
 
 
         DBCursor cursor = collection.find();
-        System.out.println("llegue 1");
+
         ArrayList<Commune> comunas = (ArrayList<Commune>) communeRepository.findAll();
         ArrayList<Region> regiones= (ArrayList<Region>) regionRepository.findAll();
-        System.out.println("llegue 2");
-        List<Commune> comunasMetropolitana =  regiones.get(6).getCommune();
-        System.out.println("{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{");
-        System.out.println("{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{");
-        System.out.println("region es :"+ regiones.get(6).getFirstName());
 
-        System.out.println("{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{");
-        System.out.println("{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{");
-        Maps[] maps= new Maps[15];
-        MapsSantiago[] mapsSantiago= new MapsSantiago[52];
-        System.out.println("llegue aca1");
+        List<Commune> comunasMetropolitana =  regiones.get(6).getCommune();
+
+        ArrayList<Maps> maps= new ArrayList<Maps>();
+        ArrayList<MapsSantiago> mapsSantiago= new ArrayList<MapsSantiago>();
+
         Date date = new Date();
         long time = date.getTime();
-        for (int i=0; i<comunasMetropolitana.size();i++){
-            mapsSantiago[i]= new MapsSantiago();
-            mapsSantiago[i].setFirstName(comunasMetropolitana.get(i).getFirstName());
-            mapsSantiago[i].setId(comunasMetropolitana.get(i).getIdMaps());
-            mapsSantiago[i].setNegative_value((long) 0);
-            mapsSantiago[i].setPositive_value((long) 0);
-
-        }
-        System.out.println("llegue aca2");
         for (int i=0;i<regiones.size();i++){
-            maps[i]= new Maps();
-            maps[i].setFirstName(regiones.get(i).getFirstName());
-            maps[i].setId(regiones.get(i).getIdMaps());
-            maps[i].setNegative_value((long) 0);
-            maps[i].setPositive_value((long) 0);
+            maps.add(new Maps());
+            maps.get(i).setFirstName(regiones.get(i).getFirstName());
+            maps.get(i).setId(regiones.get(i).getIdMaps());
+            maps.get(i).setNegative_value((long) 0);
+            maps.get(i).setPositive_value((long) 0);
+            maps.get(i).setLastUpdate(new Timestamp(time));
 
         }
-        System.out.println("llegue aca3");
+        for (int i=0; i<comunasMetropolitana.size();i++){
+            mapsSantiago.add (new MapsSantiago());
+            mapsSantiago.get(i).setFirstName(comunasMetropolitana.get(i).getFirstName());
+            mapsSantiago.get(i).setId(comunasMetropolitana.get(i).getIdMaps());
+            mapsSantiago.get(i).setNegative_value((long) 0);
+            mapsSantiago.get(i).setPositive_value((long) 0);
+            mapsSantiago.get(i).setLastUpdate(new Timestamp(time));
+
+        }
         int[] acumulador= new int[3];
         acumulador[0]=0;
         acumulador[1]=0;
@@ -160,7 +155,7 @@ public class    schedulerAnalisis {
 
 
             int region=0;
-            System.out.println(">>>>>"+tweet.get("locationUser").toString());
+//            System.out.println(">>>>>"+tweet.get("locationUser").toString());
             String location = stripAccents(tweet.get("locationUser").toString().split(",")[0]).toLowerCase();
             HashMap<String,Double> resultado = classifier.classify(tweet.get("text").toString());
             for (Commune c: comunas) {
@@ -169,11 +164,11 @@ public class    schedulerAnalisis {
                     region=c.getRegion().getId().intValue()-1;
                     if (resultado.get("positive")> resultado.get("negative")){
 
-                        maps[region].setPositive_value(maps[region].getPositive_value()+1);
+                        maps.get(region).setPositive_value(maps.get(region).getPositive_value()+1);
                     }
                     else if(resultado.get("positive")< resultado.get("negative")){
 
-                        maps[region].setNegative_value(maps[region].getNegative_value()+1);
+                        maps.get(region).setNegative_value(maps.get(region).getNegative_value()+1);
                     }
 
 
@@ -191,11 +186,11 @@ public class    schedulerAnalisis {
                     //System.out.println("Esta comuna es :"+ location);
                     if (resultado.get("positive")> resultado.get("negative")){
 
-                        mapsSantiago[i].setPositive_value(mapsSantiago[i].getPositive_value()+1);
+                        mapsSantiago.get(i).setPositive_value(mapsSantiago.get(i).getPositive_value()+1);
                     }
                     else if(resultado.get("positive")< resultado.get("negative")){
 
-                        mapsSantiago[i].setNegative_value(mapsSantiago[i].getNegative_value()+1);
+                        mapsSantiago.get(i).setNegative_value(mapsSantiago.get(i).getNegative_value()+1);
                     }
                 }
 
@@ -218,18 +213,18 @@ public class    schedulerAnalisis {
 
 
         }
-        System.out.println(">>>>llegue aca2");
-        for (Maps m: maps) {
-            m.setLastUpdate(new Timestamp(time));
-            mapsRepository.save(m);
-
-        }
-        System.out.println(">>>>llegue aca3");
-        for(MapsSantiago mapsS:  mapsSantiago){
-            mapsS.setLastUpdate(new Timestamp(time));
-            mapsSantiagoRepository.save(mapsS);
-
-        }
+//        System.out.println(">>>>llegue aca2");
+//        for (Maps m: maps) {
+//            m.setLastUpdate(new Timestamp(time));
+//            mapsRepository.save(m);
+//
+//        }
+////        System.out.println(">>>>llegue aca3");
+//        for(MapsSantiago mapsS:  mapsSantiago){
+//            mapsS.setLastUpdate(new Timestamp(time));
+//            mapsSantiagoRepository.save(mapsS);
+//
+//        }
 
         Club equipo = clubRepository.findClubById( Long.valueOf(17));
 
@@ -253,10 +248,13 @@ public class    schedulerAnalisis {
         statistics.setNegative_value(acumulador[1]);
         statistics.setNeutro_value(acumulador[2]);
 
+
         statistics.setLastUpdate(new Timestamp(time));
         statistics.setName_statics("estadistica de generales");
 
         equipo.getStatistics().add(statistics);
+        equipo.setMapasComunas(mapsSantiago);
+        equipo.setMapasRegion(maps);
         clubRepository.save(equipo);
     }
     public void analisisEspecifico(){
@@ -267,9 +265,13 @@ public class    schedulerAnalisis {
         Indice indice = new Indice();
 //        indice.indexar();
         Neo4j neo = new Neo4j();
-        neo.connect("bolt://178.62.215.252","neo4j","TBDG7");
+        neo.connect("bolt://178.128.60.200","neo4j");
         float mayorP=0;
         float mayorN=0;
+        ArrayList<Commune> comunas = (ArrayList<Commune>) communeRepository.findAll();
+        ArrayList<Region> regiones= (ArrayList<Region>) regionRepository.findAll();
+
+        List<Commune> comunasMetropolitana =  regiones.get(6).getCommune();
 
         for (Club equipo: clubs) {
             int[] acumulador = new int[3];
@@ -279,9 +281,32 @@ public class    schedulerAnalisis {
 
 
             if (equipo.getId() != 17) {
+
+
+//                Maps[] maps= new Maps[15];
+                ArrayList<Maps> maps= new ArrayList<Maps>();
+               ArrayList<MapsSantiago> mapsSantiago= new ArrayList<MapsSantiago>();
                 List<Map<String, Object>> influyentes = neo.getUsuariosInfluyentes(equipo.getName());
 //                System.out.println("obtenidos, el tamaño es : "+ influyentes.size());
                 ArrayList<Tweet> tweets;
+                for (int i=0;i<regiones.size();i++){
+                    maps.add(new Maps());
+                    maps.get(i).setFirstName(regiones.get(i).getFirstName());
+                    maps.get(i).setId(regiones.get(i).getIdMaps());
+                    maps.get(i).setNegative_value((long) 0);
+                    maps.get(i).setPositive_value((long) 0);
+                    maps.get(i).setLastUpdate(new Timestamp(time));
+
+                }
+                for (int i=0; i<comunasMetropolitana.size();i++){
+                    mapsSantiago.add (new MapsSantiago());
+                    mapsSantiago.get(i).setFirstName(comunasMetropolitana.get(i).getFirstName());
+                    mapsSantiago.get(i).setId(comunasMetropolitana.get(i).getIdMaps());
+                    mapsSantiago.get(i).setNegative_value((long) 0);
+                    mapsSantiago.get(i).setPositive_value((long) 0);
+                    mapsSantiago.get(i).setLastUpdate(new Timestamp(time));
+
+                }
                 String busqueda = equipo.getName();
                 for (Keyword apodo : equipo.getKeywords()) {
                     busqueda = busqueda + " OR  " + apodo.getName_keyword();
@@ -292,8 +317,44 @@ public class    schedulerAnalisis {
 
                 for (Tweet tweet : tweets) {
                     HashMap<String, Double> resultado = classifier.classify(tweet.getText());
+                    String location = stripAccents(tweet.getLocation().split(",")[0]).toLowerCase();
+//                    System.out.println(location);
                     int i = buscar(tweet.getName(), influyentes);
+                    int region =0;
 //                    System.out.println("el indice vale:"+i);
+                    for (Commune c: comunas) {
+
+                        if (location.equals(stripAccents(c.getFirstName()).toLowerCase())) {
+                            region = c.getRegion().getId().intValue() - 1;
+                            if (resultado.get("positive") > resultado.get("negative")) {
+
+                                maps.get(region).setPositive_value( maps.get(region).getPositive_value() + 1);
+                            } else if (resultado.get("positive") < resultado.get("negative")) {
+
+                                maps.get(region).setNegative_value( maps.get(region).getNegative_value() + 1);
+                            }
+
+
+                            break;
+                        }
+                    }
+
+                    for (int j=0 ; j< comunasMetropolitana.size();j++){
+                        Commune comuna= comunasMetropolitana.get(j);
+                        if(location.equals(stripAccents(comuna.getFirstName()).toLowerCase())){
+                            //System.out.println("Esta comuna es :"+ location);
+                            if (resultado.get("positive")> resultado.get("negative")){
+
+                                mapsSantiago.get(j).setPositive_value(mapsSantiago.get(j).getPositive_value()+1);
+                            }
+                            else if(resultado.get("positive")< resultado.get("negative")){
+
+                                mapsSantiago.get(j).setNegative_value(mapsSantiago.get(j).getNegative_value()+1);
+                            }
+                        }
+
+                    }
+
 
                     double influencia;
                     if (i > -1) {
@@ -345,6 +406,8 @@ public class    schedulerAnalisis {
                 equipo.setNeonInfluential(neoI);
 
                 equipo.getStatistics().add(statistics);
+                equipo.setMapasRegion(maps);
+                equipo.setMapasComunas(mapsSantiago);
 //
 //
 //                equipo.getNeonInfluential().setStatistic_x(acumulador[0]);

@@ -35,9 +35,10 @@ import org.apache.lucene.search.TopDocs;
 
 public class Indice{
 
-    MongoCredential credential = MongoCredential.createCredential("TBDG7", "TBDG7", "Antihackers".toCharArray());
-         MongoClient mongoClient = new MongoClient(new ServerAddress("159.65.198.230", 18117), Arrays.asList(credential));
-    DB db = mongoClient.getDB("TBDG7");
+    MongoCredential credential = MongoCredential.createCredential("TBDG7A", "TBDG7-A", "antihackers3.0".toCharArray());
+    MongoClient mongoClient = new MongoClient(new ServerAddress("178.128.222.125", 18117), Arrays.asList(credential));
+
+    DB db = mongoClient.getDB("TBDG7-A");
     DBCollection collection = db.getCollection("futbol");
     DBCursor cursor = collection.find();
 
@@ -68,6 +69,7 @@ public class Indice{
                 doc.add(new StringField("id", elemento.get("_id").toString(), Field.Store.YES));
                 doc.add(new TextField("name", elemento.get("name").toString(), Field.Store.YES));
                 doc.add(new StringField("followers", elemento.get("followers").toString(), Field.Store.YES));
+                doc.add(new StringField("location", elemento.get("locationUser").toString(),Field.Store.YES));
                 doc.add(new TextField("text", elemento.get("text").toString(), Field.Store.YES));
                 if (writer.getConfig().getOpenMode() == OpenMode.CREATE) {
                     //System.out.println("Indexando el archivo: " + elemento.get("_id") + "con texto" + elemento.get("text"));
@@ -98,7 +100,7 @@ public class Indice{
             QueryParser parser = new QueryParser("text", analyzer);
             Query query = parser.parse(equipo);
 
-            TopDocs results = searcher.search(query,310000);
+            TopDocs results = searcher.search(query,800000);
             ScoreDoc[] hits = results.scoreDocs;
             System.out.println(hits.length);
             for(int i = 0; i < hits.length; i++) {
@@ -106,6 +108,7 @@ public class Indice{
                 //String id_salida = doc.get("id");
                 //System.out.println(id_salida);
                 Tweet tw= new Tweet(doc.get("text"),doc.get("name"),doc.get("followers"));
+                tw.setLocation(doc.get("location"));
                 tweets.add(tw);
             }
             reader.close();
@@ -147,6 +150,7 @@ public class Indice{
                 //String id_salida = doc.get("id");
                 //System.out.println(id_salida);
                 Tweet tw= new Tweet(doc.get("text"),doc.get("name"),doc.get("followers"));
+                tw.setLocation(doc.get(("location")));
                 tweets.add(tw);
             }
             reader.close();

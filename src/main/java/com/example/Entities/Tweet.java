@@ -4,6 +4,7 @@ public class Tweet {
     private String name;
     private String text;
     private String followers;
+    private String location;
 
     public Tweet(String text, String name, String followers) {
         this.name=name;
@@ -33,5 +34,13 @@ public class Tweet {
 
     public void setFollowers(String followers) {
         this.followers = followers;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }

@@ -53,7 +53,7 @@ public class NeoInfluentialService {
     @ResponseBody
     public ArrayList<UsuarioInfluyente> getMayorSeguidores() {
         Neo4j neo = new Neo4j();
-        neo.connect("bolt://178.62.215.252","neo4j","TBDG7");
+        neo.connect("bolt://178.128.60.200","neo4j");
         ArrayList<UsuarioInfluyente> respuesta = neo.getUsuariosMasInfluyentes();
 
         return respuesta;
